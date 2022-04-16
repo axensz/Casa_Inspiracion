@@ -369,13 +369,13 @@ footer{
     flex-direction: column;
     text-align: center;
   }
-  .footer-content h3{
+  .footer-content h3f{
     font-size: 40px;
     font-weight: 650;
     text-transform: capitalize;
     line-height: 3rem;
   }
-  .footer-content p{
+  .footer-content pf{
     max-width: 500px;
     margin: 10px auto;
     line-height: 28px;
@@ -409,7 +409,7 @@ footer{
     padding: 20px 0;
     text-align: center;
   }
-  .footer-bottom p{
+  .footer-bottom pf{
     font-size: 14px;
     word-spacing: 2px;
     text-transform: capitalize;
