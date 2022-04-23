@@ -2,6 +2,7 @@
 
 .container {
   position: relative;
+  margin-top: -70px;
   width: 100%;
   min-height: 100vh;
   padding: 2rem;
@@ -10,6 +11,12 @@
   align-items: center;
   justify-content: center;
   box-sizing: border-box;
+}
+
+@media(max-width: 700px){
+  .container{
+      margin-top: 0px
+  }
 }
 
 .form {
