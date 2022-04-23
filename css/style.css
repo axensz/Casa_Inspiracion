@@ -277,6 +277,9 @@ h3{
 }
 
 @media(max-width: 700px){
+    .course{
+        padding-top: 30px;
+    }
     .row{
         flex-direction: column;
     }
