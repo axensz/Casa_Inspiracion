@@ -27,14 +27,14 @@ nav{
 .logo{
     padding: 3vh 3vw;
     text-align: left;
-    width: 20vw;
+    width: 30vw; /*Se cambia el espaciado entre los navbar text*/
     position: relative;
-    top: -1.875em;
+    top: -1.2em; /*Se cambia la posicion del logo - verticalmente*/
 }
 
 .logo img{
     height: auto;
-    width: 6rem;
+    width: 4.3rem;
 }
 
 /* Estilos de la barra de navegacion*/
@@ -270,20 +270,12 @@ h3{
 .course-col:hover{
     box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.2);
 }
-.row2{
-    margin-top: 0%;
-    display: flex;
-    justify-content: space-between;
-}
 
 @media(max-width: 700px){
     .course{
         padding-top: 30px;
     }
     .row{
-        flex-direction: column;
-    }
-    .row2{
         flex-direction: column;
     }
 }
