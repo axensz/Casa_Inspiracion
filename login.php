@@ -1,3 +1,12 @@
+<?php
+
+    session_start();
+    if (isset($_SESSION['usuario'])) {
+        header("location: index.php");
+    }
+
+?>    
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -28,23 +37,23 @@
             <!--Formulario login y registro-->
             <div class="contenedor_login_registro">
                 <!--Login-->
-                <form action="" class="formulario_login">
+                <form action="php/login_usuario_be.php"  method="POST" class="formulario_login">
                     <h2>Iniciar Sesión</h2>
-                    <input type="email" placeholder="Correo electronico">
-                    <input type="password" placeholder="Contraseña">
+                    <input type="email" placeholder="Correo electronico" name="correo">
+                    <input type="password" placeholder="Contraseña" name="password">
                     <a href="login_contraseña.html"><p>¿Olvidaste tu contraseña?</p></a>
-                    <button type="submit">Entrar</button>
-                    <a href="index.html" class="volver"><p>Volver</p></a>
+                    <button>Entrar</button>
+                    <a href="index.php" class="volver"><p>Volver</p></a>
                 </form>
                 <!--registro-->
-                <form action="" class="formulario_registro">
+                <form action="php/registro_be.php" method="POST" class="formulario_registro">
                     <h2>Registrarse</h2>
-                    <input type="text" placeholder="Nombre completo">
-                    <input type="text" placeholder="Usuario">
-                    <input type="email" placeholder="Correo Electronico">
-                    <input type="password" placeholder="Contraseña">
-                    <button type="submit">Registrarse</button>
-                    <a href="index.html" class="volver"><p>Volver</p></a>
+                    <input type="text" placeholder="Nombre completo" name="nombre_completo">
+                    <input type="text" placeholder="Usuario" name="usuario">
+                    <input type="email" placeholder="Correo Electronico" name="correo">
+                    <input type="password" placeholder="Contraseña" name="password">
+                    <button>Registrarse</button>
+                    <a href="index.php" class="volver"><p>Volver</p></a>
                 </form>
 
             </div>

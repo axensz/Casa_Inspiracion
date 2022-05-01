@@ -1,3 +1,8 @@
+<?php
+    session_start();
+    
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -26,6 +31,7 @@
                 <li><a href="nosotros.html">Nosotros</a></li>
                 <li><a href="contacto.html">Contacto</a></li>
                 <li><a href="login.php">Login</a></li>
+                <li><a href="php/cerrar_sesio.php">Cerrar sesion</a></li>
             </ul>
         </nav>
         <script src="js/Index.js"></script>
@@ -33,6 +39,7 @@
         <div class="text-box">
             <h1>CASA INSPIRACIÓN</h1>
             <p>Un lugar donde tendrás la oportunidad de comenzar tu negocio desde el arte.</p>
+            
             <a href="#Seccion1" class="hero-btn">Más Información</a>
         </div>
     </section>
