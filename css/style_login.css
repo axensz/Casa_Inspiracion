@@ -114,11 +114,11 @@ main{
     outline: none;
     cursor: pointer;
 }
-.contenedor_login_registro .formulario_login p{
+.contenedor_login_registro p{
     position: relative;
     top: 20px;
 }
-.contenedor_login_registro .formulario_login a{
+.contenedor_login_registro a{
     text-decoration: none;
     color: #46A2FD;
 }
