@@ -85,10 +85,7 @@ nav{
 .hamburger{
     display: none;
 }
-
-
 /*Se ingresa lo necesario para el responsive*/
-
 @media screen and (max-width: 800px){
     nav{
         position: relative;
@@ -96,7 +93,7 @@ nav{
         background-color: rgb(42, 169, 224,2);
     }
     .logo{
-        top: -40px;
+        top: -30px;
     }
     .hamburger{
         display:block;
@@ -277,6 +274,9 @@ h3{
     }
     .row{
         flex-direction: column;
+    }
+    .logo{
+        top: -20px;
     }
 }
 
