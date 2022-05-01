@@ -1,0 +1,49 @@
+section class=course2 id=Seccion1 
+        div class=contenido2 id=contenido
+        section
+        div class=container
+          div class=box
+            div class=top-bardiv
+            div class=content
+              img src=imgcontactoalvarez.jpg alt=
+              strongSantiago Álvarez Martínezstrong
+              psantyalmar1@gmail.comp
+              p2Desarrolladorp2
+            div
+            div class=btn
+              a href=#i class=fa fa-facebook aria-hidden=trueia
+              a href=#i class=fa fa-twitter aria-hidden=trueia
+              a href=#i class=fa fa-instagram aria-hidden=trueia
+            div
+          div
+          div class=box
+            div class=top-bardiv
+            div class=content
+              img src=imgcontactocamilo.jpg alt=
+              strongCamilo Andrés Guzmánstrong
+              pcamiloguzman2703@gmail.comp
+              p2Desarrolladorp2
+            div
+            div class=btn
+              a href=httpswww.facebook.comCasa-Inspiración-103737402319709i class=fa fa-facebook aria-hidden=trueia
+              a href=httpsbit.ly3rLhJz2i class=fa fa-twitter aria-hidden=trueia
+              a href=httpswww.instagram.commilo._agi class=fa fa-instagram aria-hidden=trueia
+            div
+          div
+          div class=box
+            div class=top-bardiv
+
+            div class=content
+              img src=imgcontactoarboleda.jpg alt=
+              strongJuan Felipe Arboledastrong
+              pjufealmu@gmail.com p
+              p2Desarrolladorp2
+            div
+            div class=btn
+              a href=#i class=fa fa-facebook aria-hidden=trueia
+              a href=#i class=fa fa-twitter aria-hidden=trueia
+              a href=#i class=fa fa-instagram aria-hidden=trueia
+            div
+          div
+        div 
+        div
