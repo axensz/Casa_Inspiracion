@@ -7,7 +7,8 @@
     $password = hash('sha512', $password);
 
     $validar_login = mysqli_query($conexion, "SELECT * FROM usuarios WHERE correo='$correo' and password='$password'");
-
+    $sql = mysqli_query($conexion, "SELECT id FROM usuarios WHERE correo='$correo' and password='$password'");
+    
     if (mysqli_num_rows($validar_login)) {
         $_SESSION['usuario'] = $correo;
         header("location: ../index.php");

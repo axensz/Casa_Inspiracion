@@ -40,6 +40,12 @@
 
     $ejecutar = mysqli_query($conexion, $query);
 
+    if (isset($_POST["Registrarse"])) {
+        $nombre = mysqli_real_escape_string($conexion, $_POST['nombre_completo']);
+        $usuario = mysqli_real_escape_string($conexion, $_POST['usuario']);
+        $correo = mysqli_real_escape_string($conexion, $_POST['correo']);
+        $password = mysqli_real_escape_string($conexion, $_POST['password']);
+    }
     
     if ($ejecutar) {
         echo '

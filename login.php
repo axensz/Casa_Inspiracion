@@ -52,7 +52,7 @@
                     <input type="text" placeholder="Usuario" name="usuario">
                     <input type="email" placeholder="Correo Electronico" name="correo">
                     <input type="password" placeholder="Contraseña" name="password">
-                    <button>Registrarse</button>
+                    <button name="Registrarse">Registrarse</button>
                     <a href="index.php" class="volver"><p>Volver</p></a>
                 </form>
 
