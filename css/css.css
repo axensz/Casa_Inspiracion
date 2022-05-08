@@ -9,6 +9,7 @@
     position: relative;
     height: 30px;
     width: 120px;
+    border-radius: 5px;
 }
 .contact-form .opc{
     width: 100%;
@@ -23,4 +24,5 @@
     border-radius: 25px;
     transition: 0.3s;
     box-sizing: border-box;
+    transition: all 0.25s ease;
 }
