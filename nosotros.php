@@ -1,3 +1,7 @@
+<?php
+    include 'php/sesiones/usuarios.php';
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,24 +16,9 @@
 </head>
 <body>
     <section class="header">
-        <nav>
-            <div class="logo">
-                <a href="index.html"><img src="img/Logos/PNG/LogoPNG_color.png" alt="Logo Image"></a>
-            </div>
-            <div class="hamburger">
-                <div class="bars1"></div>
-                <div class="bars2"></div>
-                <div class="bars3"></div>
-            </div>
-            <ul class="nav-links">
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="arte.html">Galerías</a></li>
-                <li><a href="nosotros.html">Nosotros</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
-                <li><a href="login.php">Login</a></li>
-            </ul>
-        </nav>
+        <?php include 'php/navbar/navbar.php';?>
         <script src="js/Index.js"></script>
+        
         <div class="text-box">
             <h1>NOSOTROS</h1>
             <p></p>

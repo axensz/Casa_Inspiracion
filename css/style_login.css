@@ -122,6 +122,10 @@ main{
     text-decoration: none;
     color: #46A2FD;
 }
+.contenedor_login_registro .error a{
+    text-decoration: none;
+    color: #fd5b46;
+}
 
 .formulario_login{
     opacity: 1;
@@ -172,3 +176,4 @@ main{
         left: -10px;
     }
 }
+

@@ -1,11 +1,8 @@
 <?php
 
-    session_start();
-    if (isset($_SESSION['usuario'])) {
-        header("location: index.php");
-    }
+    require 'php/sesiones/login.php';
 
-?>    
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -16,6 +13,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="icon" href="img/Logos/PNG/LogoPNG.png">
     <link rel="stylesheet" href="css/style_login.css">
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <title>Login</title>
 </head>
 <body>
@@ -37,18 +35,26 @@
             <!--Formulario login y registro-->
             <div class="contenedor_login_registro">
                 <!--Login-->
-                <form action="php/login_usuario_be.php"  method="POST" class="formulario_login">
+                <form method="POST" class="formulario_login" <?php echo $_SERVER['PHP_SELF']; ?>>
                     <h2>Iniciar Sesión</h2>
                     <input type="email" placeholder="Correo electronico" name="correo">
                     <input type="password" placeholder="Contraseña" name="password">
+                    <?php if ($error == 1) { ?>
+                       <script>Swal.fire({
+                            icon: 'error',
+                            text: 'Usuario o contraseña incorrecta',
+                            })
+                        </script>
+                       <?php $error=0; ?>
+                    <?php } ?>
                     <a href="login_contraseña.html"><p>¿Olvidaste tu contraseña?</p></a>
                     <button>Entrar</button>
                     <a href="index.php" class="volver"><p>Volver</p></a>
                 </form>
                 <!--registro-->
-                <form action="php/registro_be.php" method="POST" class="formulario_registro">
+                <form action="php/sesiones/registro_be.php" method="POST" class="formulario_registro">
                     <h2>Registrarse</h2>
-                    <input type="text" placeholder="Nombre completo" name="nombre_completo">
+                    <input type="text" placeholder="Nombre completo" name="nombre">
                     <input type="text" placeholder="Usuario" name="usuario">
                     <input type="email" placeholder="Correo Electronico" name="correo">
                     <input type="password" placeholder="Contraseña" name="password">

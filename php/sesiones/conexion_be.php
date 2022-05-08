@@ -1,9 +1,9 @@
 <?php
 
-    $conexion = mysqli_connect("localhost", "root", "", "login_registro_db");
+    $mysqli = new mysqli("localhost", "root", "", "login_registro_db");
     
     /*
-    if ($conexion) {
+    if ($mysqli) {
         echo 'conexion exitosa';
     }else{
         echo 'Conexion no ha sido exitosa';
