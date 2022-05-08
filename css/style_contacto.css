@@ -134,6 +134,7 @@ textarea.input {
   box-sizing: border-box;
 }
 
+
 .input-container.textarea label {
   top: 1rem;
   transform: translateY(0);
@@ -402,10 +403,14 @@ textarea.input {
   }
 }
 .footer2{
-  margin-top: 5%;
-  background: #2585ad;
-  height: auto;
-  width: auto;
-  padding-top: 40px;
-  color: #fff;
+  	margin-top: 5%;
+  	background: #2585ad;
+  	height: auto;
+  	width: auto;
+  	padding-top: 40px;
+  	color: #fff;
+}
+
+.contact-form .opc label2{
+	color: red;
 }

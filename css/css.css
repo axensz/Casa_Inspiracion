@@ -1,0 +1,26 @@
+.contact-form .opc label2{
+    position: relative;
+	color: #fff;
+}
+
+.contact-form .opc select{
+    color: #2e6caa;
+    text-decoration: none;
+    position: relative;
+    height: 30px;
+    width: 120px;
+}
+.contact-form .opc{
+    width: 100%;
+    outline: none;
+    border: 2px solid #fafafa;
+    background: none;
+    padding: 0.6rem 1.2rem;
+    color: #fff;
+    font-weight: 500;
+    font-size: 0.95rem;
+    letter-spacing: 0.5px;
+    border-radius: 25px;
+    transition: 0.3s;
+    box-sizing: border-box;
+}

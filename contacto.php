@@ -10,6 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/style_contacto.css">
+	<link rel="stylesheet" href="css/css.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="icon" href="img/Logos/PNG/LogoPNG.png">
     <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
@@ -73,6 +74,14 @@
                     <label for="">Telefono</label>
                     <span>telefono</span>
                   </div>
+				  	<div class="opc">
+						<label2 for="attending">Elige la categoria:</label2>
+							<select name="attending" id="attending" required="">
+								<option value="" selected="" disabled="">Selecciona</option>
+								<option value="Yes">Yes</option>
+								<option value="No">No</option>
+							</select>
+					</div>
                   <div class="input-container textarea">
                     <textarea name="message" class="input"></textarea>
                     <label for="">Mensaje</label>
