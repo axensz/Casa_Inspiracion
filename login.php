@@ -37,8 +37,8 @@
                 <!--Login-->
                 <form method="POST" class="formulario_login" <?php echo $_SERVER['PHP_SELF']; ?>>
                     <h2>Iniciar Sesión</h2>
-                    <input type="email" placeholder="Correo electronico" name="correo">
-                    <input type="password" placeholder="Contraseña" name="password">
+                    <input type="email" placeholder="Correo electronico" name="correo" required>
+                    <input type="password" placeholder="Contraseña" name="password" required>
                     <?php if ($error == 1) { ?>
                        <script>Swal.fire({
                             icon: 'error',
@@ -54,10 +54,10 @@
                 <!--registro-->
                 <form action="php/sesiones/registro_be.php" method="POST" class="formulario_registro">
                     <h2>Registrarse</h2>
-                    <input type="text" placeholder="Nombre completo" name="nombre">
-                    <input type="text" placeholder="Usuario" name="usuario">
-                    <input type="email" placeholder="Correo Electronico" name="correo">
-                    <input type="password" placeholder="Contraseña" name="password">
+                    <input type="text" placeholder="Nombre completo" name="nombre" required>
+                    <input type="text" placeholder="Usuario" name="usuario" required>
+                    <input type="email" placeholder="Correo Electronico" name="correo" required>
+                    <input type="password" placeholder="Contraseña" name="password" required>
                     <button name="Registrarse">Registrarse</button>
                     <a href="index.php" class="volver"><p>Volver</p></a>
                 </form>

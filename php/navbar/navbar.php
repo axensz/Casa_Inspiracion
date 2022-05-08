@@ -1,6 +1,6 @@
 <nav>
 <div class="logo">
-    <a href="index.html"><img src="img/Logos/PNG/LogoPNG_color.png" alt="Logo Image"></a>
+    <a href="index.php"><img src="img/Logos/PNG/LogoPNG_color.png" alt="Logo Image"></a>
 </div>
 <div class="hamburger">
     <div class="bars1"></div>
