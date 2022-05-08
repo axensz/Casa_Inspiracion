@@ -1,16 +1,11 @@
-@media(max-width: 900px){
+@media(max-width: 800px){
     .logo{
-        top: -26px;
-    }
-}
-@media(max-width: 1024px){
-    .logo{
-        top: -25px;
+        top: -18px;
     }
 }
 @media(max-width: 700px){
     .logo{
-        top: -29px;
+        top: -17px;
     }
 }
 @media(max-width: 400px){
@@ -22,5 +17,5 @@
     }
 }
 .nav-links.open{
-    overflow: hidden;
+    overflow-y: hidden;
 }
