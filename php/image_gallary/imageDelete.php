@@ -9,10 +9,10 @@ if(isset($_POST) && !empty($_POST['id'])){
 	   $sql_select = "SELECT image FROM image_gallery WHERE id = ".$_POST['id'];
 	   $select_result = $conn->query($sql_select);
 	    $row = $select_result->fetch_row();
-		$image_name = $row[0];
+		$nombre_imagen = $row[0];
 
 		// code to unlink(delete)  image physically from folder 
-		$unl = unlink("./uploads/".$image_name);
+		$unl = unlink("./uploads/".$nombre_imagen);
 
 		$sql = "DELETE FROM image_gallery WHERE id = ".$_POST['id'];
 		$conn->query($sql);

@@ -7,13 +7,13 @@ if(isset($_POST) && !empty($_FILES['image']['name']) && !empty($_POST['title']))
 
 	$name = $_FILES['image']['name'];
 	list($txt, $ext) = explode(".", $name);
-	$image_name = time().".".$ext;
+	$nombre_imagen = time().".".$ext;
 	$tmp = $_FILES['image']['tmp_name']; // used to upload image in folder
 
 
-	if(move_uploaded_file($tmp, 'uploads/'.$image_name)){
+	if(move_uploaded_file($tmp, 'uploads/'.$nombre_imagen)){
 
-		$sql = "INSERT INTO image_gallery (title, image) VALUES ('".$_POST['title']."', '".$image_name."')";
+		$sql = "INSERT INTO image_gallery (title, image) VALUES ('".$_POST['title']."', '".$nombre_imagen."')";
 
 		$result = $conn->query($sql);
 
