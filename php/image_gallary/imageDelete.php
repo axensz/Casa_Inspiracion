@@ -19,10 +19,10 @@ if(isset($_POST) && !empty($_POST['id'])){
 
 
 		$_SESSION['success'] = 'Image Deleted successfully.';
-		header("Location: ./image_gallary.php");
+		header("Location: ../../arte.php");
 }else{
 	$_SESSION['error'] = 'Please Select Image or Write title';
-	header("Location: ./image_gallary.php");
+	header("Location: ../../arte.php");
 }
 
 

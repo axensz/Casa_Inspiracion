@@ -20,20 +20,20 @@ if(isset($_POST) && !empty($_FILES['image']['name']) && !empty($_POST['title']))
         if($result)
         {
         	$_SESSION['success'] = 'Imagen subida exitosamente.';
-		    header("Location: ./image_gallary.php"); 
+		    header("Location: ../../arte.php"); 
 
         }
         else{
         	$_SESSION['error'] = 'Ha ocurrido un error al subir la imagen';
-		    header("Location: ./image_gallary.php");
+		    header("Location: ../../arte.php");
         }
 	}else{
 		$_SESSION['error'] = 'Ha ocurrido un error al subir la imagen';
-		header("Location: ./image_gallary.php");
+		header("Location: ../../arte.php");
 	}
 }else{
 	$_SESSION['error'] = 'Selecciona una imagen o escribe el titulo';
-	header("Location: ./image_gallary.php");
+	header("Location: ../../arte.php");
 }
 
 ?>

@@ -1,29 +1,26 @@
-.arte{
-    position: relative;
-    top: 70px;
+.gallery {
+    display: inline-block;
+    margin-top: 20px;
 }
-h3{
-    font-size: 30px;
-    position: relative;
-    top: 20px;
-    text-align: center;
-    margin: 30px 0 50px;
+
+.close-icon {
+    border-radius: 50%;
+    position: absolute;
+    right: 5px;
+    top: -10px;
+    padding: 5px 8px;
 }
-.galeria{
-    margin: 10px 50px;
-    text-align: center;
+
+.form-image-upload {
+    background: #e8e8e8 none repeat scroll 0 0;
+    padding: 15px;
 }
-.galeria img{
-    padding: 5px;
-    filter: grayscale(100%);
-    transition: 1s;
-}
-.galeria img:hover{
-    filter: grayscale(0);
-    transform: scale(1.1);
-}
-@media screen and (max-width: 800px){
-    .arte{
-        margin-bottom: 40%;
-    }
+
+.carousel-inner>.item>a>img,
+.carousel-inner>.item>img,
+.img-responsive,
+.thumbnail a>img,
+.thumbnail>img {
+    width: 300px !important;
+    height: 160px !important;
 }
