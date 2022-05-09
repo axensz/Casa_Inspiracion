@@ -5,13 +5,13 @@ require('db_config.php');
 
 if(isset($_POST) && !empty($_POST['id'])){
 
-	   // select image to delete    
+	   //Seleccionar imagen para eliminar 
 	   $sql_select = "SELECT image FROM image_gallery WHERE id = ".$_POST['id'];
 	   $select_result = $conn->query($sql_select);
 	    $row = $select_result->fetch_row();
 		$nombre_imagen = $row[0];
 
-		// code to unlink(delete)  image physically from folder 
+		// Eliminar de la carpeta
 		$unl = unlink("./uploads/".$nombre_imagen);
 
 		$sql = "DELETE FROM image_gallery WHERE id = ".$_POST['id'];
