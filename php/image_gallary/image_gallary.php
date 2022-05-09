@@ -50,7 +50,7 @@ session_start();
         <form action="./imageUpload.php" class="form-image-upload" method="POST" enctype="multipart/form-data">
             <?php if (!empty($_SESSION['error'])) { ?>
                 <div class="alert alert-danger">
-                    <strong>Error</strong>Ha ocurrido un problema al ingresar<br><br>
+                    <strong>Error</strong>: Ha ocurrido un problema al subir la imagen <br><br>
                     <ul>
                         <li><?php echo $_SESSION['error']; ?></li>
                     </ul>
