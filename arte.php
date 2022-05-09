@@ -28,14 +28,7 @@
     <div class="arte" id="arte">
         <h3>Galería de Tatuajes...</h3>
             <div class="galeria">
-            <a href="img/arte/Tatuajes/Tattoo1.png" data-lightbox="mygallery" data-title="Foto por Juan Álvarez"><img src="img/arte/Tatuajes/Tattoo1_small.png"></a>
-            <a href="img/arte/Tatuajes/Tattoo2.png" data-lightbox="mygallery" data-title="Foto por Juan Álvarez"><img src="img/arte/Tatuajes/Tattoo2_small.png"></a>
-            <a href="img/arte/Tatuajes/Tattoo3.png" data-lightbox="mygallery" data-title="Foto por Juan Álvarez"><img src="img/arte/Tatuajes/Tattoo3_small.png"></a>
-            <a href="img/arte/Tatuajes/Tattoo4.png" data-lightbox="mygallery" data-title="Foto por Fernando Martínez"><img src="img/arte/Tatuajes/Tattoo4_small.png"></a>
-            <a href="img/arte/Tatuajes/Tattoo5.png" data-lightbox="mygallery" data-title="Foto por Fernando Martínez"><img src="img/arte/Tatuajes/Tattoo5_small.png"></a>
-            <a href="img/arte/Tatuajes/Tattoo6.png" data-lightbox="mygallery" data-title="Foto por Fernando Martínez"><img src="img/arte/Tatuajes/Tattoo6_small.png"></a>
-            <a href="img/arte/Tatuajes/Tattoo7.png" data-lightbox="mygallery" data-title="Foto por Fernando Martínez"><img src="img/arte/Tatuajes/Tattoo7_small.png"></a>
-            <a href="img/arte/Tatuajes/Tattoo8.png" data-lightbox="mygallery" data-title="Foto por Fernando Martínez"><img src="img/arte/Tatuajes/Tattoo8_small.png"></a>
+            
             </div>
 
         <h3>Galería de Piercing...</h3>
