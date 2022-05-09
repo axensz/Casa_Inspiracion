@@ -6,14 +6,10 @@ session_start();
 
 <head>
     <title>Image Gallery Example</title>
-    <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <!-- References: https://github.com/fancyapps/fancyBox -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
-    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
-
     <style type="text/css">
         .gallery {
             display: inline-block;
@@ -49,22 +45,19 @@ session_start();
 
     <div class="container">
 
-        <h3 style="text-align: center; font-size: 35px;" ><i><b>PHP - Image Gallery CRUD Example</b></i></h3>
-
+        <h3 style="text-align: center; font-size: 35px;" ><i><b>GALERÍA</b></i></h3>
+        <!--Mensaje de error-->
         <form action="./imageUpload.php" class="form-image-upload" method="POST" enctype="multipart/form-data">
-
-            <!-- code to show error message -->
             <?php if (!empty($_SESSION['error'])) { ?>
                 <div class="alert alert-danger">
-                    <strong>Whoops!</strong> There were some problems with your input.<br><br>
+                    <strong>Error</strong>Ha ocurrido un problema al ingresar<br><br>
                     <ul>
                         <li><?php echo $_SESSION['error']; ?></li>
                     </ul>
                 </div>
             <?php unset($_SESSION['error']);
             } ?>
-
-            <!-- code to show success message  -->
+            <!--No ha ocurrido ningun problema -->
             <?php if (!empty($_SESSION['success'])) { ?>
                 <div class="alert alert-success alert-block">
                     <button type="button" class="close" data-dismiss="alert">×</button>
@@ -75,20 +68,19 @@ session_start();
 
             <div class="row">
                 <div class="col-md-5">
-                    <strong>Title:</strong>
-                    <input type="text" name="title" class="form-control" placeholder="Title">
+                    <strong>Titulo:</strong>
+                    <input type="text" name="title" class="form-control" placeholder="Titulo">
                 </div>
                 <div class="col-md-5">
-                    <strong>Image:</strong>
+                    <strong>Imagen:</strong>
                     <input type="file" name="image" class="form-control">
                 </div>
                 <div class="col-md-2">
                     <br />
-                    <button type="submit" class="btn btn-success">Upload</button>
+                    <button type="submit" class="btn btn-success">Subir archivo</button>
                 </div>
             </div>
         </form>
-
 
         <div class="row">
             <div class='list-group gallery' style="width:100%;">
@@ -108,10 +100,10 @@ session_start();
                             <img alt="" src="./uploads/<?php echo $image['image'] ?>" />
                             <div class='text-center'>
                                 <small class='text-muted'><?php echo $image['title'] ?></small>
-                            </div> <!-- text-center / end -->
+                            </div> <!--Texto central y final-->
                         </a>
 
-                        <!-- form to delete image -->
+                        <!--Eliminar imagen-->
                         <form action="./imageDelete.php" method="POST">
                             <input type="hidden" name="id" value="<?php echo $image['id'] ?>">
                             <button type="submit" title="delete" class="close-icon btn btn-danger"><i class="glyphicon glyphicon-remove"></i></button>
