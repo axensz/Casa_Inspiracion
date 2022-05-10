@@ -41,13 +41,10 @@ session_start();
 </head>
 
 <body>
-
-
     <div class="container">
-
         <h3 style="text-align: center; font-size: 35px;" ><i><b>GALERÍA</b></i></h3>
         <!--Mensaje de error-->
-        <form action="./imageUpload.php" class="form-image-upload" method="POST" enctype="multipart/form-data">
+        <form action="./subir_imagen.php" class="form-image-upload" method="POST" enctype="multipart/form-data">
             <?php if (!empty($_SESSION['error'])) { ?>
                 <div class="alert alert-danger">
                     <strong>Error</strong>: Ha ocurrido un problema al subir la imagen <br><br>
@@ -95,26 +92,26 @@ session_start();
                 ?>
                     <div class='col-sm-3' style="float: left;">
 
-                        <a class="thumbnail fancybox" rel="ligthbox" href="./uploads/<?php echo $image['image'] ?>">
+                        <a class="thumbnail fancybox" rel="ligthbox" href="./imagenes_subidas/<?php echo $image['image'] ?>">
                         
-                            <img alt="" src="./uploads/<?php echo $image['image'] ?>" />
+                            <img alt="" src="./imagenes_subidas/<?php echo $image['image'] ?>" />
                             <div class='text-center'>
                                 <small class='text-muted'><?php echo $image['title'] ?></small>
                             </div> <!--Texto central y final-->
                         </a>
 
                         <!--Eliminar imagen-->
-                        <form action="./imageDelete.php" method="POST">
+                        <form action="./eliminar_imagen.php" method="POST">
                             <input type="hidden" name="id" value="<?php echo $image['id'] ?>">
                             <button type="submit" title="delete" class="close-icon btn btn-danger"><i class="glyphicon glyphicon-remove"></i></button>
                         </form>
 
-                    </div> <!-- col-6 / end -->
+                    </div>
                 <?php } ?>
 
-            </div> <!-- list-group / end -->
-        </div> <!-- row / end -->
-    </div> <!-- container / end -->
+            </div>
+        </div>
+    </div> 
 </body>
 </html>
 

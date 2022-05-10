@@ -11,7 +11,7 @@ if(isset($_POST) && !empty($_FILES['image']['name']) && !empty($_POST['title']))
 	$tmp = $_FILES['image']['tmp_name']; // Se usa para cambiar archivos en la carpeta
 
 
-	if(move_uploaded_file($tmp, 'uploads/'.$nombre_imagen)){
+	if(move_uploaded_file($tmp, 'imagenes_subidas/'.$nombre_imagen)){
 
 		$sql = "INSERT INTO image_gallery (title, image) VALUES ('".$_POST['title']."', '".$nombre_imagen."')";
 
@@ -20,20 +20,20 @@ if(isset($_POST) && !empty($_FILES['image']['name']) && !empty($_POST['title']))
         if($result)
         {
         	$_SESSION['success'] = 'Imagen subida exitosamente.';
-		    header("Location: ./image_gallary.php"); 
+		    header("Location: ../../arte.php"); 
 
         }
         else{
         	$_SESSION['error'] = 'Ha ocurrido un error al subir la imagen';
-		    header("Location: ./image_gallary.php");
+		    header("Location: ../../arte.php");
         }
 	}else{
 		$_SESSION['error'] = 'Ha ocurrido un error al subir la imagen';
-		header("Location: ./image_gallary.php");
+		header("Location: ../../arte.php");
 	}
 }else{
 	$_SESSION['error'] = 'Selecciona una imagen o escribe el titulo';
-	header("Location: ./image_gallary.php");
+	header("Location: ../../arte.php");
 }
 
 ?>
