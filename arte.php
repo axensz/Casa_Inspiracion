@@ -20,7 +20,30 @@
 </head>
 <body>
     <section class="header">
-        <?php include 'php/navbar/navbar.php';?>
+        <div class="headernav">
+            <nav>
+                <div class="logo">
+                    <a href="index.php"><img src="img/Logos/PNG/LogoPNG_color.png" alt="Logo Image"></a>
+                </div>
+                <div class="hamburger">
+                    <div class="bars1"></div>
+                    <div class="bars2"></div>
+                    <div class="bars3"></div>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="index.php">Inicio</a></li>
+                    <li><a href="arte.php">Galerías</a></li>
+                    <li><a href="nosotros.php">Nosotros</a></li>
+                    <li><a href="contacto.php">Contacto</a></li>
+                    <?php if ($tipo_usuario == 3) { ?>
+                    <li><a href="login.php">Login</a></li>
+                    <?php } ?>
+                    <?php if ($tipo_usuario == 0 || $tipo_usuario == 1 ) { ?>
+                    <li><a href="php/sesiones/cerrar_sesion.php">Cerrar sesion</a></li>
+                    <?php } ?>
+                </ul>
+            </nav>
+        </div>
         <script src="js/Index.js"></script>
         <div class="text-box">
             <h1>GALERÍAS</h1>
@@ -30,8 +53,10 @@
     <div class="arte" id="arte">
         <div class="container">
 
-            <h1>Galeria</h1>
+            <h1 id="h1_galeria">Galeria</h1>
             <!--Mensaje de error-->
+
+            <?php if ($tipo_usuario == 1 ) { ?>
             <form action="php/image_gallary/subir_imagen.php" class="form-image-upload" method="POST" enctype="multipart/form-data">
                 <?php if (!empty($_SESSION['error'])) { ?>
                     <div class="alert alert-danger" role="alert">
@@ -50,7 +75,6 @@
                     </div>
                 <?php unset($_SESSION['success']);
                 } ?>
-
                 <div class="row">
                     <div class="col-md-5">
                         <strong>Titulo:</strong>
@@ -66,9 +90,9 @@
                     </div>
                 </div>
             </form>
-
-            <div class="row">
-            <div class="list-group">
+            <?php } ?>
+            
+            <div class="row row-cols-3" id="row_imagenes">
                 <?php
                 require('php/image_gallary/db_config.php');
 
@@ -78,29 +102,27 @@
                 while ($image = $images->fetch_assoc()) {
 
                 ?>
-                    <div class="col-sm-3">
-
+                    <div class="col">
                         <a class="thumbnail fancybox" rel="ligthbox" href="php/image_gallary/imagenes_subidas/<?php echo $image['image'] ?>">
                         
-                            <img alt="" src="php/image_gallary/imagenes_subidas/<?php echo $image['image'] ?>" />
-                            <div class="text-center">
-                                <small class="text-muted"><?php echo $image['title'] ?></small>
+                            <img alt="" id="imagenes" src="php/image_gallary/imagenes_subidas/<?php echo $image['image'] ?>" />
+                            <div class='text-center'>
+                                <small><?php echo $image['title'] ?></small>
                             </div> <!--Texto central y final-->
                         </a>
-
+                        <?php if ($tipo_usuario == 1 ) { ?>
                         <!--Eliminar imagen-->
                         <form action="php/image_gallary/eliminar_imagen.php" method="POST">
                             <input type="hidden" name="id" value="<?php echo $image['id'] ?>">
                             <button type="submit" title="delete" class="close-icon btn btn-danger"><i class="fa fa-times" aria-hidden="true"></i></button>
                         </form>
-
+                        <?php } ?>
                     </div>
                 <?php } ?>
-
-            </div>
+        </div>
         </div>
 
-        </div>
+
     </div>    
 
     <footer class="footer2">

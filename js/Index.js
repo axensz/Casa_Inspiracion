@@ -1,8 +1,8 @@
-const hamburger = document.querySelector(".hamburger");
-const navLinks = document.querySelector(".nav-links");
-const links = document.querySelectorAll(".nav-links li");
+const hamburger_navbar = document.querySelector(".hamburger_navbar");
+const navLinks = document.querySelector(".nav-links_navbar");
+const links = document.querySelectorAll(".nav-links_navbar li");
 
-hamburger.addEventListener('click', ()=>{
+hamburger_navbar.addEventListener('click', ()=>{
    //Links
     document.body.style.overflow = hidden;
     document.body.style.overflow = "hidden";
@@ -12,5 +12,5 @@ hamburger.addEventListener('click', ()=>{
     });
 
     //Animation
-    hamburger.classList.toggle("toggle");
+    hamburger_navbar.classList.toggle("toggle");
 });

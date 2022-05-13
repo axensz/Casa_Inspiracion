@@ -39,7 +39,7 @@ nav{
 
 /* Estilos de la barra de navegacion*/
 
-.nav-links{
+.nav-links_navbar{
     width: 80vw;
     display: flex;
     padding: 0 0.7vw;
@@ -50,7 +50,7 @@ nav{
     font-weight: 600;
 }
 
-.nav-links li a{
+.nav-links_navbar li a{
     margin: 0 0.7vw;
     text-decoration: none;
     transition: all ease-in-out 350ms;
@@ -58,23 +58,23 @@ nav{
     color: #fff;
 }
 
-.nav-links li a:hover{
+.nav-links_navbar li a:hover{
     color:#fff;
     background-color: #2AA9E0;
     padding: 0.625em;
     border-radius: 3.125em;
 }
 
-.nav-links li{
+.nav-links_navbar li{
     position:relative;
 }
-.nav-links li a:hover::before{
+.nav-links_navbar li a:hover::before{
     width: 80%;
 }
 
 /*Iconos - Barra de navegacion*/
 
-.hamburger div{
+.hamburger_navbar div{
     width: 30px;
     height: 3px;
     background: #f2f5f7;
@@ -82,7 +82,7 @@ nav{
     transition: all 0.3s ease;
 }
 
-.hamburger{
+.hamburger_navbar{
     display: none;
 }
 /*Se ingresa lo necesario para el responsive*/
@@ -95,7 +95,7 @@ nav{
     .logo{
         top: -30px;
     }
-    .hamburger{
+    .hamburger_navbar{
         display:block;
         position: absolute;
         cursor: pointer;
@@ -105,7 +105,7 @@ nav{
         z-index: 2;
         transition: all 0.7s ease;
     }
-    .nav-links{
+    .nav-links_navbar{
         background: #2AA9E0;
         position: fixed;
         opacity: 1;
@@ -117,34 +117,34 @@ nav{
         transition: all 1s ease-out;
         pointer-events: none;
     }
-    .nav-links.open{
+    .nav-links_navbar.open{
         clip-path: circle(1000px at 90% -10%);
         -webkit-clip-path: circle(1000px at 90% -10%);
         pointer-events: all;
     }
-    .nav-links li{
+    .nav-links_navbar li{
         opacity: 0;
     }
-    .nav-links li:nth-child(1){
+    .nav-links_navbar li:nth-child(1){
         transition: all 0.5s ease 0.2s;
     }
-    .nav-links li:nth-child(2){
+    .nav-links_navbar li:nth-child(2){
         transition: all 0.5s ease 0.4s;
     }
-    .nav-links li:nth-child(3){
+    .nav-links_navbar li:nth-child(3){
         transition: all 0.5s ease 0.6s;
     }
-    .nav-links li:nth-child(4){
+    .nav-links_navbar li:nth-child(4){
         transition: all 0.5s ease 0.7s;
     }
-    .nav-links li:nth-child(5){
+    .nav-links_navbar li:nth-child(5){
         transition: all 0.5s ease 0.8s;
     }
-    .nav-links li:nth-child(6){
+    .nav-links_navbar li:nth-child(6){
         transition: all 0.5s ease 0.9s;
         margin: 0;
     }
-    .nav-links li:nth-child(7){
+    .nav-links_navbar li:nth-child(7){
         transition: all 0.5s ease 1s;
         margin: 0;
     }
