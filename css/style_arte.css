@@ -2,13 +2,7 @@
     position: relative;
     top: 70px;
 }
-.list-group gallery{
-    width: 100%;
+.container h1{
+    text-align: center;
 }
-.col-sm-3{
-    float: left;
-}
-.titulo{
-    position: relative;
-    bottom: 300px;
-}
+

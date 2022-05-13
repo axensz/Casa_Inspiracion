@@ -8,12 +8,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style_arte.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" href="img/Logos/PNG/LogoPNG.png">
+    <link rel="stylesheet" href="css/style_arte.css?v=<?php echo(rand()); ?>" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <title>Arte</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
@@ -29,12 +29,13 @@
     </section>
     <div class="arte" id="arte">
         <div class="container">
-            <h3 class="titulo"><i><b>GALERÍA</b></i></h3>
+
+            <h1>Galeria</h1>
             <!--Mensaje de error-->
             <form action="php/image_gallary/subir_imagen.php" class="form-image-upload" method="POST" enctype="multipart/form-data">
                 <?php if (!empty($_SESSION['error'])) { ?>
-                    <div class="alert alert-danger">
-                        <strong>Error</strong>: Ha ocurrido un problema al subir la imagen <br><br>
+                    <div class="alert alert-danger" role="alert">
+                        <strong>Error</strong>: Ha ocurrido un problema al subir la imagen<br><br>
                         <ul>
                             <li><?php echo $_SESSION['error']; ?></li>
                         </ul>
@@ -43,8 +44,8 @@
                 } ?>
                 <!--No ha ocurrido ningun problema -->
                 <?php if (!empty($_SESSION['success'])) { ?>
-                    <div class="alert alert-success alert-block">
-                        <button type="button" class="close" data-dismiss="alert">×</button>
+                    <div class="alert alert-success" role="alert">
+                        <i class="fa fa-info-circle" aria-hidden="true"></i>
                         <strong><?php echo $_SESSION['success']; ?></strong>
                     </div>
                 <?php unset($_SESSION['success']);
@@ -61,44 +62,45 @@
                     </div>
                     <div class="col-md-2">
                         <br />
-                        <button type="submit" class="btn btn-success">Subir archivo</button>
+                        <button type="submit" class="btn btn-primary">Subir archivo</button>
                     </div>
                 </div>
             </form>
 
             <div class="row">
-                <div class='list-group gallery'">
-                    <?php
-                    require('php/image_gallary/db_config.php');
+            <div class="list-group">
+                <?php
+                require('php/image_gallary/db_config.php');
 
-                    $sql = "SELECT * FROM image_gallery";
-                    $images = $conn->query($sql);
+                $sql = "SELECT * FROM image_gallery";
+                $images = $conn->query($sql);
 
-                    while ($image = $images->fetch_assoc()) {
+                while ($image = $images->fetch_assoc()) {
 
-                    ?>
-                        <div class='col-sm-3'>
+                ?>
+                    <div class="col-sm-3">
 
-                            <a class="thumbnail fancybox" rel="ligthbox" href="php/image_gallary/imagenes_subidas/<?php echo $image['image'] ?>">
-                            
-                                <img alt="" src="php/image_gallary/imagenes_subidas/<?php echo $image['image'] ?>" />
-                                <div class='text-center'>
-                                    <small class='text-muted'><?php echo $image['title'] ?></small>
-                                </div> <!--Texto central y final-->
-                            </a>
+                        <a class="thumbnail fancybox" rel="ligthbox" href="php/image_gallary/imagenes_subidas/<?php echo $image['image'] ?>">
+                        
+                            <img alt="" src="php/image_gallary/imagenes_subidas/<?php echo $image['image'] ?>" />
+                            <div class="text-center">
+                                <small class="text-muted"><?php echo $image['title'] ?></small>
+                            </div> <!--Texto central y final-->
+                        </a>
 
-                            <!--Eliminar imagen-->
-                            <form action="php/image_gallary/eliminar_imagen.php" method="POST">
-                                <input type="hidden" name="id" value="<?php echo $image['id'] ?>">
-                                <button type="submit" title="delete" class="close-icon btn btn-danger"><i class="glyphicon glyphicon-remove"></i></button>
-                            </form>
+                        <!--Eliminar imagen-->
+                        <form action="php/image_gallary/eliminar_imagen.php" method="POST">
+                            <input type="hidden" name="id" value="<?php echo $image['id'] ?>">
+                            <button type="submit" title="delete" class="close-icon btn btn-danger"><i class="fa fa-times" aria-hidden="true"></i></button>
+                        </form>
 
-                        </div>
-                    <?php } ?>
+                    </div>
+                <?php } ?>
 
-                </div>
             </div>
-        </div> 
+        </div>
+
+        </div>
     </div>    
 
     <footer class="footer2">
