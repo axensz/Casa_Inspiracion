@@ -10,6 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/style_preguntas.css">
+    <link rel="stylesheet" href="css/style_filosofia.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="icon" href="img/Logos/PNG/LogoPNG.png">
     <title>Nosotros</title>
@@ -25,13 +26,23 @@
             <a href="#contenedor" class="hero-btn">Más Información</a>
     </section>
 
-
-
-    <section class="nosotros"></section>
-        <div class="quienes-somos">
-            <h3>Quienes somos</h3>
-                <div class="text">Somos una empresa empeñada en ayudar a los emprendedores</div>
+    <section class="course" id="Seccion1">
+        <h1>Nuestra Filosofía</h1>
+        <div class="row">
+            <div class="course-col">
+                <h3>Misión</h3>
+                <p>Nuestra misión es motivar a artistas tanto grandes, medianos y pequeños a dedicarse enteramente a su habilidad artística, ofreciéndoles posibilidades de trabajo, un ambiente sano en donde aparte de trabajar podrán mejorar en compañía de otros emprendedores de igual o mayor experiencia en el campo.</p>
+            </div>
+            <div class="course-col">
+                <h3>¿Quienes Somos?</h3>
+                <p>Somos una empresa que se empeña en ofrecer espacios de trabajo, herramientas y ayudas para aquellos artistas plásticos, artesanos, grafiteros, artistas del body art, etc. que comienzan su carrera y/o negocio, trabajadores independientes, pero principalmente profesionales que utilizan el arte como su principal herramienta de trabajo y desarrollo personal, donde el factor colaborativo por parte ellos sean algo altamente valorado.</p>
+            </div>
+            <div class="course-col">
+                <h3>Visión</h3>
+                <p>Como visión, un plan de trabajo de cinco años en el que se propone como mínimo ayudar a establecer dos negocios anualmente de nuestros emprendedores, dando así un total de diez nuevos negocios artísticos y gradualmente ir aumentando el número de artistas establecidos en la zona.</p>
+            </div>
         </div>
+    </section>
 <section class="contenedor_preguntas">
     <div class="contenedor" id="contenedor">
         <div class="preguntas">
