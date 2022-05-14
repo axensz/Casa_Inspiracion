@@ -62,11 +62,11 @@
                     </div>
                     <div class="casilla-faq">
                         <div class="pregunta">
-                            <h3>¿Que empresas pueden alquilar nuestros insumos?<span>P</span></h3>
+                            <h3>¿Que empresas estan asociadas para la prestación de insumos?<span>P</span></h3>
                             <div class="mas"><i>+</i></div>
                         </div>
                         <div class="respuesta">
-                            <p>No entiendo hptas<span>R</span></p>
+                            <p>Estamos asociados con las mejores marcas para asegurarnos de ofrecer herramientas y materiales de alta calidad. Algunas referencias que podemos dar son las siguientes: Eternal Ink (tintas para tatuajes), KWADRON (Agujas para tatuaje), darklab (Maquinas para tatuar)<span>R</span></p>
                         </div>
                     </div>
                     <div class="casilla-faq">
