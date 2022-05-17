@@ -10,7 +10,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/css.css">
-    <link rel="stylesheet" href="css/style_index_art.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="icon" href="img/Logos/PNG/LogoPNG.png">
     <title>Casa Inspiración</title>
@@ -47,49 +46,6 @@
             </div>
         </div>
     </section>
-
-    <div style="text-align:center;">
-        <h1>Tipos de Arte</h1>
-        </div>
-
-    <div class="container_cards">
-    
-        <div class="card">
-            <div class="cover">
-                <img src="img/arte/Musicos/musico.png" alt="">
-                <div class="img_back"></div>
-            </div>
-            <div class="description">
-                <h2>Musicos</h2>
-                <p>La música es un mundo dentro de sí mismo, es un lenguaje que todos entendemos.</p>
-                <input type="button" value="Leer Más">
-            </div>
-        </div>
-        <div class="card">
-            <div class="cover">
-                <img src="img/arte/Tatuajes/tatuador11.png" alt="">
-                <div class="img_back"></div>
-            </div>
-            <div class="description">
-                <h2>Tatuadores</h2>
-                <p>El arte no se limita solo a lápiz y papel, también en la piel se plasman las ideas de la gente.</p>
-                    <input type="button" value="Leer Más">
-            </div>
-        </div>
-        <div class="card">
-            <div class="cover">
-                <img src="img/arte/Barberos/barbero2.png" alt="">
-                <div class="img_back"></div>
-            </div>
-            <div class="description">
-                <h2>Barberos</h2>
-                <p>Barbero que no sea parlero, no tiene espacio en este mundo de pordioseros.</p>
-                <input type="button" value="Leer Más">
-            </div>
-        </div>
-
-    </div>
-
 
     <!----seccion 2---->
     <section class="campus">

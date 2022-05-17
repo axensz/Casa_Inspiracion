@@ -74,7 +74,7 @@ session_start();
                 </div>
                 <div class="col-md-2">
                     <br />
-                    <button type="submit" class="btn btn-success">Subir archivo</button>
+                    <button type="submit" class="btn btn-primary">Subir archivo</button>
                 </div>
             </div>
         </form>

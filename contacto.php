@@ -24,12 +24,9 @@
             <p></p>
             <a href="#container" class="hero-btn">Más Información</a>
                        
- 
-
 
     </section>
-  
-     
+      
         <div class="container" id="container">
             <div class="form">
               <div class="contact-info">
