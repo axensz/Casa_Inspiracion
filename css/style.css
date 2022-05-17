@@ -267,6 +267,19 @@ h3{
 .course-col:hover{
     box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.2);
 }
+
+@media(max-width: 700px){
+    .course{
+        padding-top: 30px;
+    }
+    .row{
+        flex-direction: column;
+    }
+    .logo{
+        top: -20px;
+    }
+}
+
 /*Seccion 2*/
 .campus{
     width: 80%;
@@ -330,16 +343,7 @@ h3{
     margin-bottom: 40px;
     padding: 0;
 }
-@media(max-width: 700px){
-    .course{
-        padding-top: 30px;
-    }
-    .row{
-        flex-direction: column;
-    }
-    .logo{
-        top: -20px;
-    }
+@media (max-width: 700px) {
     .cta h1{
         font-size: 24px;
     }

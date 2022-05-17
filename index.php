@@ -1,5 +1,6 @@
 <?php
-    include 'php/sesiones/usuarios.php';
+    session_start();
+    
 ?>
 
 <!DOCTYPE html>
@@ -9,14 +10,30 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/css.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="icon" href="img/Logos/PNG/LogoPNG.png">
     <title>Casa Inspiración</title>
 </head>
 <body>
     <section class="header">
-        <?php include 'php/navbar/navbar.php';?>
+        <nav>
+            <div class="logo">
+                <a href="index.html"><img src="img/Logos/PNG/LogoPNG_color.png" alt="Logo Image"></a>
+            </div>
+            <div class="hamburger">
+                <div class="bars1"></div>
+                <div class="bars2"></div>
+                <div class="bars3"></div>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="arte.html">Galerías</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="login.php">Login</a></li>
+                <li><a href="php/cerrar_sesio.php">Cerrar sesion</a></li>
+            </ul>
+        </nav>
         <script src="js/Index.js"></script>
 
         <div class="text-box">
