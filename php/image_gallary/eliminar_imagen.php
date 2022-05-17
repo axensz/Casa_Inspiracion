@@ -18,10 +18,10 @@ if(isset($_POST) && !empty($_POST['id'])){
 		$conn->query($sql);
 
 
-		$_SESSION['success'] = 'Imagen eliminada correctamente.';
+		$_SESSION['success'] = 'Image Deleted successfully.';
 		header("Location: ../../arte.php");
 }else{
-	$_SESSION['error'] = 'Por favor selecciona una imagen o escribe el titulo';
+	$_SESSION['error'] = 'Please Select Image or Write title';
 	header("Location: ../../arte.php");
 }
 
