@@ -12,7 +12,10 @@
     <link rel="stylesheet" href="css/style.css?v=<?php echo(rand()); ?>" />
     <link rel="stylesheet" href="css/style_arte.css?v=<?php echo(rand()); ?>" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>Arte</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
+
 </head>
 <body>
     <section class="header">
@@ -25,11 +28,10 @@
         </div>
     </section>
     <div class="arte" id="arte">
-
+        
     </div>    
 
     <?php include 'php/footer/footer.php'?>
-
 
 </body>
 </html>

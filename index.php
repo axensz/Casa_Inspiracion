@@ -27,7 +27,6 @@
     </section>
     
     <!----Seccion 2---->
-
     <section class="course" id="Seccion1">
         <h1>Servicios</h1>
         <div class="row">
@@ -45,7 +44,41 @@
             </div>
         </div>
     </section>
-
+        <section class="cards">
+            <h1>Categorias de usuarios</h1>
+            <div class="container_cards">
+                <div class="card">
+                    <div class="cover">
+                        <img src="img/arte/Musicos/musico.png" alt="">
+                        <div class="img_back"></div>
+                    </div>
+                    <div class="description">
+                        <h2>Músicos</h2>
+                        <p>“La música es un mundo dentro de sí mismo, es un lenguaje que todos entendemos.”</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="cover">
+                        <img src="img/arte/Tatuajes/tatuador11.png" alt="">
+                        <div class="img_back"></div>
+                    </div>
+                    <div class="description">
+                        <h2>Tatuadores</h2>
+                        <p>“El arte no se limita solo a lápiz y papel, también en la piel se plasman las ideas de la gente.”</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="cover">
+                        <img src="img/arte/Barberos/barbero2.png" alt="">
+                        <div class="img_back"></div>
+                    </div>
+                    <div class="description">
+                        <h2>Barberos</h2>
+                        <p>“Tu vida puede cambiar en la barbería porque renovar tu estilo también es renovar tu vida.”</p>
+                    </div>
+                </div>
+            </div>
+        </section>
     <!----seccion 2---->
     <section class="campus">
         <h1>Arte</h1>

@@ -224,14 +224,112 @@ nav .fa{
     }
 
 }
-
 /*Seccion 2*/
+.cards{
+    padding-bottom: 50px;
+}
+.cards h1{
+    text-align: center;
+}
+.container_cards {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.container_cards h1{
+    text-align: center;
+}
+.card {
+    width: 320px;
+    padding: 10px;
+    margin: 10px;
+    transition: all 300ms;   
+}
+.card .cover {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+}
+.card .cover img {
+    width: 250px;
+    height: 300px;
+    position: relative;
+    z-index: 1;
+    top: 40px;
+    display: block;
+    margin: auto;
+    transition: all 400ms;
+    filter: drop-shadow(5px 5px 4px rgba(7, 164, 192, 0.1));
+}
+.card:hover .cover img {
+    top: 0px;
+}
+.card .img_back {
+    width: 100%;
+    height: 200px;
+    position: absolute;
+    bottom: -80px;
+    left: 0;
+    background-size: cover;
+    transition: all 300ms;
+}
+.card:nth-of-type(1) .img_back {
+    background-image: url(../img/fondo-tarjetas/fondo_tarjeta4.jpg);
+}
+.card:nth-of-type(2) .img_back {
+    background-image: url(../img/fondo-tarjetas/fondo_tarjeta4.jpg);
+}
+.card:nth-of-type(3) .img_back {
+    background-image: url(../img/fondo-tarjetas/fondo_tarjeta4.jpg);
+}
+.card:hover .img_back{
+    bottom: -40px;
+}
+.card .description {
+    
+    background: #2aa9e025;
+    margin-top: -10px;
+    padding: 20px;
+    border-radius: 0px 0px 20px 20px;
+    transition: all 300ms;
+}
+.card .description:hover {
+    background: rgba(42, 169, 224, 0.2);
+}
+.card:hover {
+    padding: 10px;
+}
+.card .description input {
+    padding: 10px 40px;
+    margin-top: 20px;
+    border: none;
+    background: #2aa9e0a2;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: all 300ms;
+}
+.card .description input:hover {
+    background: #2AA9E0;
+}
+.card .description h2 {
+    text-align: center;
+    margin-top: 10px;
+}
+.card .description p {
+    text-align: center;
+    margin-top: 10px;
+}
+
+/*Seccion 3*/
 .course{
     width: 80%;
     margin: auto;
     text-align: center;
     padding-top: 100px;
-    padding-bottom: 50px;
 }
 
 h1{
@@ -280,7 +378,7 @@ h3{
     }
 }
 
-/*Seccion 2*/
+/*Seccion 4*/
 .campus{
     width: 80%;
     margin: auto;
@@ -290,7 +388,6 @@ h3{
 .campus-col{
     flex-basis: 32%;
     border-radius: 10px;
-    margin-bottom: 30px;
     position: relative;
     overflow: hidden;
 }
@@ -351,6 +448,7 @@ h3{
 
 
 
+
 /*Footer*/
 footer{
     margin-top: 15%;
@@ -359,7 +457,7 @@ footer{
     width: auto;
     padding-top: 40px;
     color: #fff;
-  }
+}
   .footer-content{
     display: flex;
     align-items: center;
@@ -419,6 +517,7 @@ footer{
     font-weight: 200;
     color: rgb(199, 199, 199);
 }
+
   /*Responsive general*/
 @media only screen and (min-width: 360px) and (max-width: 500px) {
     .logo{
