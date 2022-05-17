@@ -95,8 +95,7 @@
       </div>
           <script src="js/app.js?v=<?php echo(rand()); ?>"></script>
 
-        <footer>
             <?php include 'php/footer/footer.php'?>
-        </footer>
+        
 </body>
 </html>

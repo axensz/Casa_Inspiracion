@@ -25,6 +25,7 @@
         </div>
     </section>
 
+
 <section class="contenedor_preguntas">
     <div class="contenedor" id="contenedor">
         <div class="preguntas">
@@ -65,8 +66,7 @@
 <script src="js/preguntas.js?v=<?php echo(rand()); ?>"></script>
 </section>
 
-    <footer>
-        <?php include 'php/footer/footer.php'?>
-    </footer>
+    <?php include 'php/footer/footer.php'?>
+    
 </body>
 </html>

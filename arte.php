@@ -28,9 +28,8 @@
 
     </div>    
 
-    <footer>
     <?php include 'php/footer/footer.php'?>
-    </footer>
+
 
 </body>
 </html>
