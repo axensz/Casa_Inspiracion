@@ -2,7 +2,7 @@
 
 .container {
   position: relative;
-  margin-top: px;
+  margin-top: 5%;
   width: 100%;
   min-height: 100vh;
   padding: 2rem;
@@ -36,6 +36,34 @@
   background-color: #2aa9e0be;
   position: relative;
   box-sizing: border-box;
+}
+.contact-form .opc label2{
+  position: relative;
+color: #fff;
+}
+
+.contact-form .opc select{
+  color: #2e6caa;
+  text-decoration: none;
+  position: relative;
+  height: 30px;
+  width: 150px;
+  border-radius: 5px;
+}
+.contact-form .opc{
+  width: 100%;
+  outline: none;
+  border: 2px solid #fafafa;
+  background: none;
+  padding: 0.6rem 1.2rem;
+  color: #fff;
+  font-weight: 500;
+  font-size: 0.95rem;
+  letter-spacing: 0.5px;
+  border-radius: 25px;
+  transition: 0.3s;
+  box-sizing: border-box;
+  transition: all 0.25s ease;
 }
 
 .circle {
@@ -400,12 +428,4 @@ textarea.input {
   .btn {
     padding: 0.45rem 1.2rem;
   }
-}
-.footer2{
-  margin-top: 5%;
-  background: #2585ad;
-  height: auto;
-  width: auto;
-  padding-top: 40px;
-  color: #fff;
 }

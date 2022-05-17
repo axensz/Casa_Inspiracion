@@ -1,39 +1,28 @@
+<?php
+    include 'php/Inicio_Sesion/usuarios.php';
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/style_preguntas.css">
+    <link rel="stylesheet" href="css/style.css?v=<?php echo(rand()); ?>" />
+    <link rel="stylesheet" href="css/style_preguntas.css?v=<?php echo(rand()); ?>" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="icon" href="img/Logos/PNG/LogoPNG.png">
     <title>Nosotros</title>
 </head>
 <body>
     <section class="header">
-        <nav>
-            <div class="logo">
-                <a href="index.html"><img src="img/Logos/PNG/LogoPNG_color.png" alt="Logo Image"></a>
-            </div>
-            <div class="hamburger">
-                <div class="bars1"></div>
-                <div class="bars2"></div>
-                <div class="bars3"></div>
-            </div>
-            <ul class="nav-links">
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="arte.html">Galerías</a></li>
-                <li><a href="nosotros.html">Nosotros</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
-                <li><a href="login.php">Login</a></li>
-            </ul>
-        </nav>
-        <script src="js/Index.js"></script>
+        <?php include 'php/navbar/navbar.php'?>
+        <script src="js/Index.js?v=<?php echo(rand()); ?>"></script>
         <div class="text-box">
             <h1>NOSOTROS</h1>
             <p></p>
             <a href="#contenedor" class="hero-btn">Más Información</a>
+        </div>
     </section>
 
 <section class="contenedor_preguntas">
@@ -73,23 +62,11 @@
             </div>
         </div>
     </div>
-<script src="js/preguntas.js"></script>
+<script src="js/preguntas.js?v=<?php echo(rand()); ?>"></script>
 </section>
 
-<footer class="footer2">
-    <div class="footer-content">
-        <h3f>Casa Inspiración</h3f>
-        <pf>"El arte es amor hecho público."</pf>
-        <ul class="social">
-            <li><a href="https://www.facebook.com/Casa-Inspiración-103737402319709"><i class="fa fa-facebook" target="_blank"></i></a></li>
-            <li><a href="https://twitter.com/casa_insp" target="_blank" ><i class="fa fa-twitter" target="_blank"></i></a></li>
-            <li><a href="https://www.instagram.com/casa_insp/?hl=es" target="_blank"><i class="fa fa-instagram"></i></a></li>
-            <li><a href="https://www.youtube.com/channel/UCp3xGxWRsfwjYEtyGpx-gBQ" target="_blank" ><i class="fa fa-youtube" target="_blank"></i></a></li>
-        </ul>
-    </div>
-    <div class="footer-bottom">
-        <pf>copyright &copy;2022 Casa Inspiración. Diseñado por <span>Santiago, Felipe & Camilo</span></pf>
-    </div>
-</footer>
+    <footer>
+        <?php include 'php/footer/footer.php'?>
+    </footer>
 </body>
 </html>
