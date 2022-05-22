@@ -17,7 +17,6 @@
     <section class="header">
         <?php include 'php/navbar/navbar.php'?>
         <script src="js/Index.js?v=<?php echo(rand()); ?>"></script>
-
         <div class="text-box">
             <h1>CASA INSPIRACIÓN</h1>
             <p>Un lugar donde tendrás la oportunidad de comenzar tu negocio desde el arte.</p>

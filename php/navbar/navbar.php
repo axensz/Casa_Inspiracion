@@ -12,12 +12,19 @@
         <li><a href="arte.php">Galerías</a></li>
         <li><a href="nosotros.php">Nosotros</a></li>
         <li><a href="contacto.php">Contacto</a></li>
+        <?php if ($tipo_usuario == 0 || $tipo_usuario == 1 ) { ?>
+        <div class="dropdown">
+        <li><a><button onclick="myFunction()" class="dropbtn">Perfil</button></li></a>    
+            <div id="myDropdown" class="dropdown-content">
+                <a href="">editar perfil</a>
+                <a href="php/Inicio_Sesion/cerrar_sesion.php">Cerrar sesion</a>
+            </div>
+        </div>
+        <?php } ?>
         <?php if ($tipo_usuario == 3) { ?>
         <li><a href="login.php">Login</a></li>
         <?php } ?>
-        <?php if ($tipo_usuario == 0 || $tipo_usuario == 1 ) { ?>
-        <li><a href="php/Inicio_Sesion/cerrar_sesion.php">Cerrar sesion</a></li>
-        <?php } ?>
+        
     </ul>
 </nav>
 
