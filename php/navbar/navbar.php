@@ -16,7 +16,7 @@
         <div class="dropdown">
         <li><a><button onclick="myFunction()" class="dropbtn">Perfil</button></li></a>    
             <div id="myDropdown" class="dropdown-content">
-                <a href="">editar perfil</a>
+                <a href="dashboard.php">Opciones</a>
                 <a href="php/Inicio_Sesion/cerrar_sesion.php">Cerrar sesion</a>
             </div>
         </div>
