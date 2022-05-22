@@ -114,6 +114,31 @@ main{
     outline: none;
     cursor: pointer;
 }
+.contenedor_login_registro form button3{
+    padding: 10px 40px;
+    border: none;
+    font-size: 14px;
+    background: #46A2FD;
+    color: white;
+    outline: none;
+    cursor: pointer;
+}
+.contenedor_login_registro form button2{
+    padding: 10px 40px;
+    margin-top: 0px;
+    margin-bottom: -30px;
+    border: none;
+    font-size: 17px;
+    background: transparent;
+    color: #46A2FD;
+    outline: none;
+    cursor: pointer;
+}
+.contenedor_login_registro form button2:hover{
+    background: transparent;
+    color: #46A2FD;
+}
+
 .contenedor_login_registro p{
     position: relative;
     top: 20px;
@@ -175,4 +200,26 @@ main{
     .caja_trasera .caja_trasera_registro button{
         left: -10px;
     }
+}
+.modal-body input{
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: none;
+    background: #f2f2f2;
+    font-size: 16px;
+    outline: none;
+}
+.modal-body p{
+    font-size: 16px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #46A2FD;    
+}
+.icon i{
+    width: 500px;
+}
+.center{
+    color: #46A2FD;
 }

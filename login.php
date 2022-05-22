@@ -10,7 +10,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="icon" href="img/Logos/PNG/LogoPNG.png">
-    <link rel="stylesheet" href="css/style_login.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style_login.css?v=<?php echo(rand()); ?>" />
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <title>Login</title>
 </head>
@@ -45,10 +48,30 @@
                         </script>
                        <?php $error=0; ?>
                     <?php } ?>
-                    <a href="index.php"><p>¿Olvidaste tu contraseña?</p></a>
+                    <a><p><button2 type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">¿Olvidaste tu contraseña?</button2></p></a>
                     <button>Entrar</button>
                     <a href="index.php" class="volver"><p>Volver</p></a>
                 </form>
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <div class="center"><h5 class="modal-title" id="exampleModalLabel">¿Olvidaste tu contraseña?</h5></div>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                    <div class="text-center"><i class="fa fa-envelope-o fa-5x"></i></div>
+                                <p>Escribe el correo electronico vinculado a tu cuenta:</p>
+                                <input type="email" placeholder="Correo electronico" name="correo" required>
+                                <div class="text-center"><button type="button" class="btn btn-primary" id="center_button">Enviar correo</button></div>
+                            </div>
+                            <div class="modal-footer">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
                 <!--registro-->
                 <form action="php/Inicio_Sesion/registro_be.php" method="POST" class="formulario_registro">
                     <h2>Registrarse</h2>
