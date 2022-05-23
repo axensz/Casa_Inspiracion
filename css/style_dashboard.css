@@ -493,6 +493,10 @@ h1, .h1 {
 .divbutton{
     margin-top: 5%;
 }
+#button_editar{
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
 
 @media (max-width: 768px) {
     .editarperfil{

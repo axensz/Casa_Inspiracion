@@ -56,11 +56,12 @@
                         <div class="container rounded bg-white mt-5 mb-5" >
                             <div class="row">
                                 <div class="col-md-3 border-right">
-                                    <div class="d-flex flex-column align-items-center text-center p-3 py-5"><img class="rounded-circle mt-5" width="150px" src="https://st3.depositphotos.com/15648834/17930/v/600/depositphotos_179308454-stock-illustration-unknown-person-silhouette-glasses-profile.jpg">
-                                    <span class="font-weight-bold"><?php echo $nombre ?></span>
-                                    <span class="text-black-50"></span>
-                                    <span></span>
-                                </div>
+                                    <div class="d-flex flex-column align-items-center text-center p-3 py-5">
+                                        <img class="rounded-circle mt-5" width="150px" src="https://st3.depositphotos.com/15648834/17930/v/600/depositphotos_179308454-stock-illustration-unknown-person-silhouette-glasses-profile.jpg">
+                                        <span class="font-weight-bold"><?php echo $nombre ?></span>
+                                        <span class="text-black-50"></span>
+                                        <span></span>
+                                    </div>
                                 </div>
                                 <div class="col-md-5 border-right">
                                     <div class="p-3 py-5">
@@ -135,28 +136,28 @@
                             ?>
                             <div class="modal-body">
                                 <div class="row mt-2">
-                                    <form action="<?=$_SERVER['PHP_SELF']?>" method="POST">
+                                    <form action="<?=$_SERVER['PHP_SELF']?>" method="POST" name="fr" onsubmit='return validar()'>
                                         <div class="col">
                                             <label class="labels">Nombre</label>
-                                            <input id="nombre" type="text" class="form-control" placeholder="Nombre completo" value="<?php echo $nombre ?>" name="nombre">
+                                            <input id="nombre" type="text" class="form-control" placeholder="Nombre completo" value="<?php echo $nombre ?>" name="nombre" id="nombre" onchange="toggleButton()">
 
                                             <label class="labels">Usuario</label>
-                                            <input id="nombre" type="text" class="form-control" placeholder="Usuario" value="<?php echo $usuario ?>" name="usuario">
+                                            <input id="nombre" type="text" class="form-control" placeholder="Usuario" value="<?php echo $usuario ?>" name="usuario" id="usuario">
 
                                             <label class="labels">Email</label>
-                                            <input id="correo" type="text" class="form-control" placeholder="Email" value="<?php echo $correo?>" readonly="readonly" style="background-color: white;" name="correo">
+                                            <input id="correo" type="text" class="form-control" placeholder="Email" value="<?php echo $correo?>" readonly="readonly" style="background-color: white;" name="correo" id="correo">
 
                                             <label class="labels">Ocupación</label>
-                                            <input id="ocupacion"type="text" class="form-control" placeholder="Ocupación" value="<?php echo $ocupacion?>" name="ocupacion">
+                                            <input id="ocupacion"type="text" class="form-control" placeholder="Ocupación" value="<?php echo $ocupacion?>" name="ocupacion" id="ocupacion">
 
                                             <label class="labels">Ingresa un telefono</label>
-                                            <input id="telefono"type="tel" class="form-control" placeholder="Telefono" value="<?php echo $telefono?>" name="telefono" pattern="[0-9]{3}[0-9]{2}[0-9]{2}[0-9]{3}">
+                                            <input id="telefono"type="tel" class="form-control" placeholder="Telefono" value="<?php echo $telefono?>" name="telefono" pattern="[0-9]{3}[0-9]{2}[0-9]{2}[0-9]{3}" id="telefono">
 
                                             <label class="labels">cambiar contraseña</label>
-                                            <input id="contraseña"type="password" class="form-control" placeholder="Contraseña" value="" name="password">
+                                            <input id="contraseña"type="password" class="form-control" placeholder="Contraseña" value="" name="password" id="password" onchange="toggleButton()">
 
-                                        <div class="divbutton">
-                                            <button type="submit" class="btn btn-primary editbtn" name="enviar">Guardar cambios</button>
+                                        <div class="text-center">
+                                            <button type="submit" class="btn btn-primary editbtn" name="enviar" id="button_editar">Guardar cambios</button>
                                         </div>
                                     </form>
                                 </div>
@@ -169,6 +170,20 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div>                         
+
+    <script type='text/javascript'>
+    function validar(){
+        var correcto = true;
+        if(document.getElementById('usuario').value.length <= 0 ){
+            todo_correcto = false;
+        }
+        if(!correcto){
+        alert('Algunos campos no están correctos, vuelva a revisarlos');
+        }
+        return todo_correcto;
+    }
+    </script>
+
 </body>
 </html>
