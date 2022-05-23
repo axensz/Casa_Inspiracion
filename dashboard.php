@@ -13,6 +13,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="stylesheet" href="css/style_dashboard.css?v=<?php echo(rand()); ?>" />
     <script src="js/dashboard.js?v=<?php echo(rand()); ?>"></script>
+    <script src="js/modal.js?v=<?php echo(rand()); ?>"></script>
     <link rel="icon" href="img/Logos/PNG/LogoPNG.png">
     <title>Dashboard</title>
 </head>
@@ -53,10 +54,31 @@
                         <div class='card-body'>
                             <p>Tu tipo de cuenta es: <?php echo $tipo?></p>
                         </div>
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  Launch demo modal
+</button>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog modal-dialog-centered">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <div class="center"><h5 class="modal-title" id="exampleModalLabel">¿Olvidaste tu contraseña?</h5></div>
+                                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                </div>
+                                                <div class="modal-body">
+                                                        <div class="text-center"><i class="fa fa-envelope-o fa-5x"></i></div>
+                                                    <p>Escribe el correo electronico vinculado a tu cuenta:</p>
+                                                    <input type="email" placeholder="Correo electronico" name="correo" required>
+                                                    <div class="text-center"><button type="button" class="btn btn-primary" id="center_button">Enviar correo</button></div>
+                                                </div>
+                                                <div class="modal-footer">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
 </body>
 </html>

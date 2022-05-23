@@ -8,7 +8,7 @@
         $password = $_POST['password'];
         $password_bd = hash('sha512', $password);
 
-        $sql = "Select id, password, tipo_usuario, nombre, correo FROM db_login WHERE correo = '$correo'";
+        $sql = "Select id, password, tipo_usuario, nombre, correo, ocupacion, telefono FROM db_login WHERE correo = '$correo'";
         //echo $sql;
         $resultado = $mysqli->query($sql);
         $num = $resultado->num_rows;
@@ -20,6 +20,8 @@
             $_SESSION['id'] = $row['id'];
             $_SESSION['nombre'] = $row['nombre'];
             $_SESSION['tipo_usuario'] = $row['tipo_usuario'];
+            $_SESSION['ocupacion'] = $row['ocupacion'];
+            $_SESSION['telefono'] = $row['telefono'];
             header("Location: index.php");
         }else{
             $error = 1;
