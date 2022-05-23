@@ -24,10 +24,9 @@
             <h1>CONTACTO</h1>
             <p></p>
             <a href="#container" class="hero-btn">Más Información</a>
-        </div>   
-
+        </div>  
+        
     </section>
-      
         <div class="container" id="container">
             <div class="form">
               <div class="contact-info">
@@ -35,7 +34,6 @@
                 <p class="text">
                   Si deseas consultar mayor información sobre nuestros servicios o tienes alguna duda al respecto, no dudes en solicitar una consultoría gratuita y uno de nuestros asesores te contactará a la brevedad.
                 </p>
-      
                 <div class="social-media">
                   <p>Conectate:</p>
                   <div class="social-icons">
@@ -52,7 +50,6 @@
                   </div>
                 </div>
               </div>
-      
               <div class="contact-form">
                 <span class="circle one"></span>
                 <span class="circle two"></span>
@@ -74,14 +71,6 @@
                     <label for="">Telefono</label>
                     <span>telefono</span>
                   </div>
-                  <div class="opc">
-						<label2 for="attending">Elige la categoria:</label2>
-							<select name="attending" id="attending" required="">
-								<option value="" selected="" disabled="">Selecciona</option>
-								<option value="Yes">Yes</option>
-								<option value="No">No</option>
-							</select>
-					</div>
                   <div class="input-container textarea">
                     <textarea name="message" class="input"></textarea>
                     <label for="">Mensaje</label>
@@ -94,8 +83,6 @@
           </div>
       </div>
           <script src="js/app.js?v=<?php echo(rand()); ?>"></script>
-
             <?php include 'php/footer/footer.php'?>
-        
 </body>
 </html>

@@ -9,7 +9,6 @@
     $password = $_POST['password'];
     //Se encripta la contraseña
     $password = hash('sha512', $password);
-
     //metodo para ingresar datos
     $query = "INSERT INTO db_login(nombre, usuario, correo, password) 
               VALUES('$nombre','$usuario','$correo','$password')";

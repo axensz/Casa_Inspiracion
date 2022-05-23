@@ -1,5 +1,6 @@
 <?php
-    include 'php/Inicio_Sesion//login.php';
+    include 'php/Inicio_Sesion/login.php';
+    
 ?>
 
 <!DOCTYPE html>

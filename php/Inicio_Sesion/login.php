@@ -20,6 +20,7 @@
                 $_SESSION['correo'] = $row['correo'];
                 $_SESSION['usuario'] = $row['usuario'];
                 $_SESSION['id'] = $row['id'];
+                $_SESSION['password'] = $row['password'];
                 $_SESSION['nombre'] = $row['nombre'];
                 $_SESSION['tipo_usuario'] = $row['tipo_usuario'];
                 $_SESSION['ocupacion'] = $row['ocupacion'];
