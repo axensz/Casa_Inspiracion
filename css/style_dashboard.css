@@ -388,11 +388,11 @@ h1, .h1 {
     background-color: rgba(236, 238, 239, 0.3);
 }
 
+
 @media (min-width: 992px) {
     .dashboard-app {
         margin-left: 238px;
     }
-
     .dashboard-compact .dashboard-app {
         margin-left: 0;
     }
@@ -415,7 +415,6 @@ h1, .h1 {
         bottom: 0;
         z-index: 1070;
     }
-
     .dashboard-nav.mobile-show {
         display: block;
     }
@@ -434,7 +433,6 @@ h1, .h1 {
     .dashboard-toolbar {
         left: 238px;
     }
-
     .dashboard-compact .dashboard-toolbar {
         left: 0;
     }
@@ -485,4 +483,24 @@ h1, .h1 {
 }
 #tittle{
     text-align: center;
+}
+.editarperfil{
+    margin-left: 20%;
+}
+.center{
+    color: #46A2FD;
+}
+.divbutton{
+    margin-top: 5%;
+}
+
+@media (max-width: 768px) {
+    .editarperfil{
+        margin-left: 0;
+    }
+}
+@media (max-width: 992px) {
+    .editarperfil{
+        margin-left: 0;
+    }
 }

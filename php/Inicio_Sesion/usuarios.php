@@ -12,6 +12,7 @@
         $tipo_usuario = 3;
     }else{
         $nombre = $_SESSION['nombre'];
+        $usuario = $_SESSION['usuario'];
         $correo = $_SESSION['correo'];
         $telefono = $_SESSION['telefono'];
         $ocupacion = $_SESSION['ocupacion'];

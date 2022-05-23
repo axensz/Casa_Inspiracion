@@ -14,9 +14,9 @@
     <link rel="stylesheet" href="css/style_dashboard.css?v=<?php echo(rand()); ?>" />
     <script src="js/dashboard.js?v=<?php echo(rand()); ?>"></script>
     <link rel="icon" href="img/Logos/PNG/LogoPNG.png">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha1/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha1/dist/js/bootstrap.bundle.min.js">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="js/modal_editar.js?v=<?php echo(rand()); ?>"></script>
     <title>Editar perfil</title>
 </head>
 <body>
@@ -65,16 +65,95 @@
                                             <h4 class="text-right" id="tittle">Editar Perfil</h4>
                                         </div>  
                                         <div class="row mt-2">
-                                            <div class="col-md-12"><label class="labels">Nombre</label><input type="text" class="form-control" placeholder="Nombre completo" value="<?php echo $nombre ?>" ></div>
-                                            <div class="col-md-12"><label class="labels">Email</label><input type="text" class="form-control" placeholder="Email" value="<?php echo $correo?>" readonly="readonly"></div>
-                                            <div class="col-md-12"><label class="labels">Contraseña</label><input type="text" class="form-control" placeholder="Contraseña" value=""></div>
+                                            <div class="col-md-12"><label class="labels">Nombre</label><input id="nombre" type="text" class="form-control" placeholder="Nombre completo" value="<?php echo $nombre ?>" readonly="readonly" style="background-color: white;"></div>
+                                            <div class="col-md-12"><label class="labels">Usuario</label><input id="nombre" type="text" class="form-control" placeholder="Usuario" value="<?php echo $usuario ?>" readonly="readonly" style="background-color: white;"></div>
+                                            <div class="col-md-12"><label class="labels">Email</label><input id="correo" type="text" class="form-control" placeholder="Email" value="<?php echo $correo?>" readonly="readonly" style="background-color: white;"></div>
+                                            <div class="col-md-12"><label class="labels">Ocupación</label><input id="ocupacion"type="text" class="form-control" placeholder="Ocupación" value="<?php echo $ocupacion?>" readonly="readonly" style="background-color: white;"></div>
+                                            <?php if ($telefono == 0){ ?>
+                                            <div class="col-md-12"><label class="labels">Telefono</label><input id="telefono"type="text" class="form-control" placeholder="Telefono" value="" readonly="readonly" style="background-color: white;"></div>
+                                            <?php } ?>
+                                            <?php if ($telefono > 0){ ?>
+                                            <div class="col-md-12"><label class="labels">Telefono</label><input id="telefono"type="text" class="form-control" placeholder="Telefono" value="<?php echo $telefono?>" readonly="readonly" style="background-color: white;"></div>
+                                            <?php } ?>
+                                            <div class="col-md-12"><label class="labels">Contraseña</label><input id="contraseña"type="text" class="form-control" placeholder="Contraseña" value="*******" readonly="readonly" style="background-color: white;"></div>
                                         </div>
-                                        <div class="mt-5 text-center"><button class="btn btn-primary profile-button" type="button">Guardar edición</button></div>
+                                        <div class="mt-5 text-center">
+                                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Editar datos</button>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>    
+                    </div>   
+
+                    <?php
+                        if(isset($_POST["enviar"]))
+                        {
+                        $usuario = $_POST['usuario'];
+                        $password = $_POST['password'];
+                        $ocupacion = $_POST['ocupacion'];
+                        
+                        
+                        $update = 'UPDATE productos SET
+                        usuario=TRIM("'.$usuario.'"),
+                        password=TRIM("'.$password.'"),
+                        ocupacion=TRIM("'.$ocupacion.'")
+                        WHERE id=TRIM('.$id.')';
+                        
+                        
+                        if ($conn->query($update) === TRUE) 
+                        {
+                        echo '<script type="text/javascript">'; 
+                        echo 'alert("EDICION CORRECTA. YA PUEDE CERRAR ESTA VENTANA ");'; 
+                        echo 'window.location = "javascript:history.back(1)";';
+                        echo '</script>';
+                        
+                        }
+                        else
+                        {
+                        
+                        echo '<script type="text/javascript">'; 
+                        echo 'alert("ERROR REVISAR SI FALTAN DATOS");'; 
+                        echo 'window.location = "javascript:history.back(1)";';
+                        echo '</script>';
+                        }
+                        
+                        }
+                    
+                    ?> 
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                        <div class="modal-header">
+                            <div class="center"><h5 class="modal-title" id="exampleModalLabel">Editar datos</h5></div>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="row mt-2">
+                                <form action="editar_perfil.php" method="POST">
+                                <div class="col-md-12"><label class="labels">Nombre</label><input id="nombre" type="text" class="form-control" placeholder="Nombre completo" value="<?php echo $nombre ?>" name="nombre"></div>
+                                <div class="col-md-12"><label class="labels">Usuario</label><input id="nombre" type="text" class="form-control" placeholder="Usuario" value="<?php echo $usuario ?>" name="usuario"></div>
+                                <div class="col-md-12"><label class="labels">Email</label><input id="correo" type="text" class="form-control" placeholder="Email" value="<?php echo $correo?>" readonly="readonly" style="background-color: white;" name="correo"></div>
+                                <div class="col-md-12"><label class="labels">Ocupación</label><input id="ocupacion"type="text" class="form-control" placeholder="Ocupación" value="<?php echo $ocupacion?>" name="ocupacion"></div>
+                                <?php if ($telefono == 0){ ?>
+                                <div class="col-md-12"><label class="labels">Ingresa un telefono</label><input id="telefono"type="text" class="form-control" placeholder="Telefono" value="" name="telefono"></div>
+                                <?php } ?>
+                                <?php if ($telefono > 0){ ?>
+                                <div class="col-md-12"><label class="labels">Cambiar telefono</label><input id="telefono"type="text" class="form-control" placeholder="Telefono" value="<?php echo $telefono?>" name="telefono"></div>
+                                <?php } ?>
+                                <div class="col-md-12"><label class="labels">cambiar contraseña</label><input id="contraseña"type="text" class="form-control" placeholder="Contraseña" value="" name="contraseña"></div>
+                                </div>
+                                <div class="divbutton"><button type="submit" class="btn btn-primary editbtn" name="enviar">Guardar cambios</button></div>
+                                </form>
+                            </div>
+                        <div class="modal-footer">
+                            
+                        </div>
+                        </div>
+                    </div>
+                    </div> 
                 </div>
             </div>
         </div>
