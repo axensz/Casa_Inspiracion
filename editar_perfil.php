@@ -10,17 +10,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="stylesheet" href="css/style_dashboard.css?v=<?php echo(rand()); ?>" />
     <script src="js/dashboard.js?v=<?php echo(rand()); ?>"></script>
     <link rel="icon" href="img/Logos/PNG/LogoPNG.png">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/style_dashboard.css?v=<?php echo(rand()); ?>" />
     <script src="js/modal_editar.js?v=<?php echo(rand()); ?>"></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="sweetalert2.all.min.js"></script>
+    <script src="js/editar.js?v=<?php echo(rand()); ?>"></script>
     <title>Editar perfil</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
 </head>
 <body>
     <div class='dashboard'>
@@ -36,7 +40,7 @@
                     <div class='dashboard-nav-boton-desplegable'>
                         <a href="#!" class="dashboard-nav-item dashboard-nav-boton-desplegable-toggle"><i class="fas fa-users"></i>Usuarios</a>
                         <div class='dashboard-nav-boton-desplegable-menu'>
-                            <a href="#" class="dashboard-nav-boton-desplegable-item">Usuarios registrados</a>
+                            <a href="usuarios.php" class="dashboard-nav-boton-desplegable-item">Usuarios registrados</a>
                         </div>
                     </div>
                 <?php } ?>
@@ -136,28 +140,28 @@
                             ?>
                             <div class="modal-body">
                                 <div class="row mt-2">
-                                    <form action="<?=$_SERVER['PHP_SELF']?>" method="POST" name="fr" onsubmit='return validar()'>
+                                    <form action="<?=$_SERVER['PHP_SELF']?>" method="POST" name="fr">
                                         <div class="col">
                                             <label class="labels">Nombre</label>
-                                            <input id="nombre" type="text" class="form-control" placeholder="Nombre completo" value="<?php echo $nombre ?>" name="nombre" id="nombre" onchange="toggleButton()">
+                                            <input id="nombre" type="text" class="form-control nombre" placeholder="Nombre completo" value="<?php echo $nombre ?>" name="nombre">
 
                                             <label class="labels">Usuario</label>
-                                            <input id="nombre" type="text" class="form-control" placeholder="Usuario" value="<?php echo $usuario ?>" name="usuario" id="usuario">
+                                            <input id="usuario" type="text" class="form-control" placeholder="Usuario" value="<?php echo $usuario ?>" name="usuario" autocomplete="off" onchange="toggleButton()">
 
                                             <label class="labels">Email</label>
-                                            <input id="correo" type="text" class="form-control" placeholder="Email" value="<?php echo $correo?>" readonly="readonly" style="background-color: white;" name="correo" id="correo">
+                                            <input id="correo" type="text" class="form-control" placeholder="Email" value="<?php echo $correo?>" readonly="readonly" style="background-color: white;" name="correo">
 
                                             <label class="labels">Ocupación</label>
-                                            <input id="ocupacion"type="text" class="form-control" placeholder="Ocupación" value="<?php echo $ocupacion?>" name="ocupacion" id="ocupacion">
+                                            <input id="ocupacion"type="text" class="form-control" placeholder="Ocupación" value="<?php echo $ocupacion?>" name="ocupacion">
 
                                             <label class="labels">Ingresa un telefono</label>
-                                            <input id="telefono"type="tel" class="form-control" placeholder="Telefono" value="<?php echo $telefono?>" name="telefono" pattern="[0-9]{3}[0-9]{2}[0-9]{2}[0-9]{3}" id="telefono">
+                                            <input id="telefono"type="tel" class="form-control" placeholder="Telefono" value="<?php echo $telefono?>" name="telefono" pattern="[0-9]{3}[0-9]{2}[0-9]{2}[0-9]{3}">
 
                                             <label class="labels">cambiar contraseña</label>
-                                            <input id="contraseña"type="password" class="form-control" placeholder="Contraseña" value="" name="password" id="password" onchange="toggleButton()">
+                                            <input id="password" type="password" class="form-control password" placeholder="Contraseña" value="" name="password" autocomplete="off" onchange="toggleButton()">
 
                                         <div class="text-center">
-                                            <button type="submit" class="btn btn-primary editbtn" name="enviar" id="button_editar">Guardar cambios</button>
+                                            <button type="submit" class="btn btn-primary editbtn" name="enviar" id="button_editar" disabled>Guardar cambios</button>
                                         </div>
                                     </form>
                                 </div>
@@ -170,20 +174,6 @@
                 </div>
             </div>
         </div>
-    </div>                         
-
-    <script type='text/javascript'>
-    function validar(){
-        var correcto = true;
-        if(document.getElementById('usuario').value.length <= 0 ){
-            todo_correcto = false;
-        }
-        if(!correcto){
-        alert('Algunos campos no están correctos, vuelva a revisarlos');
-        }
-        return todo_correcto;
-    }
-    </script>
-
+    </div>    
 </body>
 </html>

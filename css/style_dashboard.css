@@ -508,3 +508,38 @@ h1, .h1 {
         margin-left: 0;
     }
 }
+
+/* Curso CSS estilos aprenderaprogramar.com*/
+body {font-family: Arial, Helvetica, sans-serif;}
+
+table {
+    margin: 10px;     
+    width: 90%; 
+    text-align: left;}
+
+th {
+    font-size: 13px;     
+    font-weight: normal;     
+    padding: 8px;     
+    background: #b9d7f0;
+    border-top: 4px solid #aabcfe;    
+    border-bottom: 1px solid #fff; 
+    color: #000000; }
+
+td {    
+    padding: 8px;         
+    border-bottom: 1px solid #fff;
+    color: rgb(0, 0, 0);    
+    border-top: 1px solid transparent; 
+}
+tr {    
+    padding: 8px;     
+    border-bottom: 1px solid #fff;
+    border-top: 1px solid transparent; 
+}
+
+
+tr:hover td { 
+    background: #b9d7f0; 
+    color: rgb(0, 0, 0)
+}
