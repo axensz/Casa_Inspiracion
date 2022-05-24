@@ -1,6 +1,6 @@
 <?php
     include 'php/Inicio_Sesion/usuarios.php';
-    require 'php/consultar/buscar.php';
+    require 'php/consultar/buscar_agendas.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -14,15 +14,17 @@
     <link rel="stylesheet" href="css/style_dashboard.css?v=<?php echo(rand()); ?>" />
     <script src="js/dashboard.js?v=<?php echo(rand()); ?>"></script>
     <script src="js/modal.js?v=<?php echo(rand()); ?>"></script>
-    <script src="js/consultar/min.js?v=<?php echo(rand()); ?>"></script>
     <link rel="icon" href="img/Logos/PNG/LogoPNG.png">
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.12.0/css/jquery.dataTables.css">
     <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.12.0/js/jquery.dataTables.js"></script>
-    <title>Usuarios Registrados</title>
+    <title>Dashboard</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>¿
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/style_dashboard_tables.css?v=<?php echo(rand()); ?>" />
+    <script src="js/consultar/min.js?v=<?php echo(rand()); ?>"></script>
 </head>
 <body>
+    
     <div class='dashboard'>
         <div class="dashboard-nav">
             <header>
@@ -34,9 +36,10 @@
                 <a href="dashboard.php" class="dashboard-nav-item active"><i class="fas fa-tachometer-alt"></i>Dashboard</a>
                 <?php if ($tipo_usuario == 1) { ?>
                     <div class='dashboard-nav-boton-desplegable'>
-                        <a href="#!" class="dashboard-nav-item dashboard-nav-boton-desplegable-toggle"><i class="fas fa-users"></i>Usuarios</a>
+                        <a href="#!" class="dashboard-nav-item dashboard-nav-boton-desplegable-toggle"><i class="fas fa-users"></i>Administrar</a>
                         <div class='dashboard-nav-boton-desplegable-menu'>
-                            <a href="" class="dashboard-nav-boton-desplegable-item">Usuarios registrados</a>
+                            <a href="dashboard_usuarios.php" class="dashboard-nav-boton-desplegable-item">Usuarios registrados</a>
+                            <a href="" class="dashboard-nav-boton-desplegable-item">Citas agendadas</a>
                         </div>
                     </div>
                 <?php } ?>
@@ -52,17 +55,16 @@
             </header>
             <div class='dashboard-contenido'>
                 <div class='container'>
-                    <div class="form-1-2">
-                        <h1 class="text-center">USUARIOS REGISTRADOS</h1>
-                    </div>
-                    <div class="Tabla">
-                        <?php echo $salida;?>
-                    <table id="table_id" class="tabla_datos">
-                        <thead class="table-dark">
-                        </thead>
-                        <tbody id="datos">
+                    <div class="form-2">
+                            <h1 class="text-center">CITAS AGENDADAS</h1>
                         </div>
-                    
+                        <div class="Tabla">
+                            <?php echo $salida;?>
+                        <table id="table_id" class="tabla_datos">
+                            <thead class="table-dark">
+                            </thead>
+                            <tbody id="datos">
+                    </div>
                     <script src="js/consultar/jquery.min.js.js?v=<?php echo(rand()); ?>"></script>
                 </div>
             </div>
@@ -89,6 +91,5 @@
         });
         
     </script>
-
 </body>
 </html>

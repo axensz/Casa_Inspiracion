@@ -40,7 +40,7 @@
                     <div class='dashboard-nav-boton-desplegable'>
                         <a href="#!" class="dashboard-nav-item dashboard-nav-boton-desplegable-toggle"><i class="fas fa-users"></i>Usuarios</a>
                         <div class='dashboard-nav-boton-desplegable-menu'>
-                            <a href="usuarios.php" class="dashboard-nav-boton-desplegable-item">Usuarios registrados</a>
+                            <a href="dashboard_usuarios.php" class="dashboard-nav-boton-desplegable-item">Usuarios registrados</a>
                         </div>
                     </div>
                 <?php } ?>
