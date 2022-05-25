@@ -25,7 +25,7 @@ index, pasando la fecha en curso como un campo oculto.*/
   </head>
   <body onLoad="javascript:volver();">
 <!-- El siguiente formulario es para volver a index xon la fecha en curso. -->
-    <form action="dashboard.php" method="post" name="retorno" id="retorno">
+    <form action="../../dashboard.php" method="post" name="retorno" id="retorno">
 	  <input type="hidden" name="fechaEnCurso" id="fechaEnCurso" value="<?php echo ($_POST['fechaEnCurso']);?>">
 	</form>
   </body>

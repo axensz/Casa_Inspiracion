@@ -64,9 +64,9 @@
                     <div class="fecha">
                             <?php
                             // Se incluye el miniscript que abre la base de datos.
-                                include ("inc/fechas.php");
+                                include ("php/dashboard_agenda/inc/fechas.php");
                             // Se incluye el miniscript de tratamiento de fechas
-                                include ("inc/usarBD.php");
+                                include ("php/dashboard_agenda/inc/usarBD.php");
                             /* Se crea una consulta para recuperar todos los datos de las citas con fecha del d�a en curso.
                             La consulta de selecci�n se crea de tal modo que ordene las citas por la hora. */
                                 $consulta="SELECT * FROM citas WHERE diacita='".$fechaEnCurso."' ORDER BY horacita;";
@@ -119,12 +119,12 @@
                                     ?>
                                     <div class="">
                                     <?php
-                                    echo ("<button type='button' class='btn btn-primary btnprincipal1' name='borrarCita' type='button' id='borrarCita' value='Eliminar Cita'  onClick='javascript:saltar(\"eliminarCita.php\");'>Eliminar Cita</button>");
+                                    echo ("<button type='button' class='btn btn-primary btnprincipal1' name='borrarCita' type='button' id='borrarCita' value='Eliminar Cita'  onClick='javascript:saltar(\"php/dashboard_agenda/eliminarCita.php\");'>Eliminar Cita</button>");
                                     }
                             /* En todo caso se mostrar�n los botones de agregar cita y cambiar la fecha en curso. */
-                                    echo (" <button type='button' class='btn btn-primary btnprincipal' name='nuevaCita' type='button' id='nuevaCita' value='Agregar cita' onClick='javascript:saltar(\"dashboard_agendar.php\");'>Agendar cita</button>");
+                                    echo (" <button type='button' class='btn btn-primary btnprincipal' name='nuevaCita' type='button' id='nuevaCita' value='Agregar cita' onClick='javascript:saltar(\"php/dashboard_agenda/dashboard_agendar.php\");'>Agendar cita</button>");
                                     
-                                    echo ("<button type='button' class='btn btn-primary btnprincipal' name='cambiarFecha' type='button' id='cambiarFecha' value='Otro d&iacute;a' onClick='javascript:saltar(\"dashboard_fecha.php\");'>Cambiar fecha</button>");
+                                    echo ("<button type='button' class='btn btn-primary btnprincipal' name='cambiarFecha' type='button' id='cambiarFecha' value='Otro d&iacute;a' onClick='javascript:saltar(\"php/dashboard_agenda/dashboard_fecha.php\");'>Cambiar fecha</button>");
                                 ?>
                                 </div>
                                 </form>

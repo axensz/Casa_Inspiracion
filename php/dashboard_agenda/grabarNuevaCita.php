@@ -1,5 +1,5 @@
 <?php
-    include 'php/Inicio_Sesion/usuarios.php';
+    include '../../php/Inicio_Sesion/usuarios.php';
 ?>
 <html>
   <head>
@@ -27,7 +27,7 @@
   }
   
   ?>
-  <form action="dashboard.php" name="retorno" id="retorno" method="post">
+  <form action="../../dashboard.php" name="retorno" id="retorno" method="post">
     <input type="hidden" name="fechaEnCurso" id="fechaEnCurso" value="<?php echo ($fechaEnCurso); ?>">
   </form>
   </body>

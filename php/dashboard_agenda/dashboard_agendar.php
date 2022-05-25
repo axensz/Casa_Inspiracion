@@ -1,5 +1,5 @@
 <?php
-    include 'php/Inicio_Sesion/usuarios.php';
+    include '../Inicio_Sesion/usuarios.php';
 ?>
 
 <!DOCTYPE html>
@@ -11,9 +11,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="css/style_dashboard.css?v=<?php echo(rand()); ?>" />
-    <script src="js/dashboard.js?v=<?php echo(rand()); ?>"></script>
-    <script src="js/modal.js?v=<?php echo(rand()); ?>"></script>
+    <link rel="stylesheet" href="../../css/style_dashboard.css?v=<?php echo(rand()); ?>" />
+    <script src="../../js/dashboard.js?v=<?php echo(rand()); ?>"></script>
+    <script src="../../js/modal.js?v=<?php echo(rand()); ?>"></script>
     <link rel="icon" href="img/Logos/PNG/LogoPNG.png">
     <title>Dashboard</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
@@ -23,7 +23,7 @@
         if (resultado){
           document.formularioNuevaCita.action="grabarNuevaCita.php";
         } else {
-           document.formularioNuevaCita.action="dashboard.php";
+           document.formularioNuevaCita.action="../../dashboard.php";
         }
         document.formularioNuevaCita.submit();
       }
@@ -39,14 +39,14 @@
                 <a href="dashboard.php" class="inspiracion-logo"><span>Casa Inspiración</span></a>
             </header>
             <nav class="dashboard-nav-list">
-                <a href="index.php" class="dashboard-nav-item"><i class="fas fa-home"></i>Inicio</a>
-                <a href="dashboard.php" class="dashboard-nav-item active"><i class="fas fa-tachometer-alt"></i>Dashboard</a>
+                <a href="../../index.php" class="dashboard-nav-item"><i class="fas fa-home"></i>Inicio</a>
+                <a href="../../dashboard.php" class="dashboard-nav-item active"><i class="fas fa-tachometer-alt"></i>Dashboard</a>
                 <?php if ($tipo_usuario == 1) { ?>
                     <div class='dashboard-nav-boton-desplegable'>
                         <a href="#!" class="dashboard-nav-item dashboard-nav-boton-desplegable-toggle"><i class="fas fa-users"></i>Administrar</a>
                         <div class='dashboard-nav-boton-desplegable-menu'>
-                            <a href="dashboard_usuarios.php" class="dashboard-nav-boton-desplegable-item">Usuarios registrados</a>
-                            <a href="dashboard_tabla_citas.php" class="dashboard-nav-boton-desplegable-item">Citas agendadas</a>
+                            <a href="../../dashboard_usuarios.php" class="dashboard-nav-boton-desplegable-item">Usuarios registrados</a>
+                            <a href="../../dashboard_tabla_citas.php" class="dashboard-nav-boton-desplegable-item">Citas agendadas</a>
                         </div>
                     </div>
                 <?php } ?>

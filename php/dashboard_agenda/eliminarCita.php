@@ -1,6 +1,6 @@
 <?php
 /* Si se intenta acceder sin haber seleccionado una cita, se regresa al index. */
-  if (!isset($_POST["citaSeleccionada"])) header("Location: dashboard.php");
+  if (!isset($_POST["citaSeleccionada"])) header("Location: ../../dashboard.php");
 ?>
 <html>
   </head>
@@ -30,7 +30,7 @@ radio de la pagina dashboard.php (ver c�digo).*/
     mysqli_close($conexion);
   }
   ?>
-  <form action="dashboard.php" method="post" name="retorno" id="retorno">
+  <form action="../../dashboard.php" method="post" name="retorno" id="retorno">
     <input type="hidden" name="fechaEnCurso" id="fechaEnCurso" value="<?php echo ($fechaEnCurso); ?>">
   </form>
   </body>
