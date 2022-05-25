@@ -42,7 +42,7 @@
                         </div>
                     </div>
                 <?php } ?>
-                    <a href="editar_perfil.php" class="dashboard-nav-item"><i class="fas fa-cogs"></i>Editar perfil</a>
+                    <a href="dashboard_editar_perfil.php" class="dashboard-nav-item"><i class="fas fa-cogs"></i>Editar perfil</a>
                 <div class="nav-item-divider">
                 </div>
                 <a href="php/Inicio_Sesion/cerrar_sesion.php" class="dashboard-nav-item"><i class="fas fa-sign-out-alt"></i>Cerrar sesión</a>

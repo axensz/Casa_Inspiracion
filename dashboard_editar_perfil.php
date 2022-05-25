@@ -41,6 +41,7 @@
                         <a href="#!" class="dashboard-nav-item dashboard-nav-boton-desplegable-toggle"><i class="fas fa-users"></i>Usuarios</a>
                         <div class='dashboard-nav-boton-desplegable-menu'>
                             <a href="dashboard_usuarios.php" class="dashboard-nav-boton-desplegable-item">Usuarios registrados</a>
+                            <a href="dashboard_tabla_citas.php" class="dashboard-nav-boton-desplegable-item">Citas agendadas</a>
                         </div>
                     </div>
                 <?php } ?>
@@ -67,29 +68,29 @@
                                         <span></span>
                                     </div>
                                 </div>
-                                <div class="col-md-5 border-right">
-                                    <div class="p-3 py-5">
-                                        <div class="d-flex justify-content-between align-items-center mb-3">
-                                            <h4 class="text-right" id="tittle">Editar Perfil</h4>
-                                        </div>  
-                                        <div class="row mt-2">
-                                            <div class="col-md-12"><label class="labels">Nombre</label><input id="nombre" type="text" class="form-control" placeholder="Nombre completo" value="<?php echo $nombre ?>" readonly="readonly" style="background-color: white;"></div>
-                                            <div class="col-md-12"><label class="labels">Usuario</label><input id="nombre" type="text" class="form-control" placeholder="Usuario" value="<?php echo $usuario ?>" readonly="readonly" style="background-color: white;"></div>
-                                            <div class="col-md-12"><label class="labels">Email</label><input id="correo" type="text" class="form-control" placeholder="Email" value="<?php echo $correo?>" readonly="readonly" style="background-color: white;"></div>
-                                            <div class="col-md-12"><label class="labels">Ocupación</label><input id="ocupacion"type="text" class="form-control" placeholder="Ocupación" value="<?php echo $ocupacion?>" readonly="readonly" style="background-color: white;"></div>
-                                            <?php if ($telefono == 0){ ?>
-                                            <div class="col-md-12"><label class="labels">Telefono</label><input id="telefono"type="text" class="form-control" placeholder="Telefono" value="" readonly="readonly" style="background-color: white;"></div>
-                                            <?php } ?>
-                                            <?php if ($telefono > 0){ ?>
-                                            <div class="col-md-12"><label class="labels">Telefono</label><input id="telefono"type="text" class="form-control" placeholder="Telefono" value="<?php echo $telefono?>" readonly="readonly" style="background-color: white;"></div>
-                                            <?php } ?>
-                                            <div class="col-md-12"><label class="labels">Contraseña</label><input id="contraseña"type="text" class="form-control" placeholder="Contraseña" value="*******" readonly="readonly" style="background-color: white;"></div>
-                                        </div>
-                                        <div class="mt-5 text-center">
-                                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Editar datos</button>
+                                    <div class="col-md-5 border-right">
+                                        <div class="p-3 py-5">
+                                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                                <h4 class="text-right" id="tittle">Editar Perfil</h4>
+                                            </div>  
+                                            <div class="row mt-2">
+                                                <div class="col-md-12"><label class="labels">Nombre</label><input id="nombre" type="text" class="form-control" placeholder="Nombre completo" value="<?php echo $nombre ?>" readonly="readonly" style="background-color: white;"></div>
+                                                <div class="col-md-12"><label class="labels">Usuario</label><input id="nombre" type="text" class="form-control" placeholder="Usuario" value="<?php echo $usuario ?>" readonly="readonly" style="background-color: white;"></div>
+                                                <div class="col-md-12"><label class="labels">Email</label><input id="correo" type="text" class="form-control" placeholder="Email" value="<?php echo $correo?>" readonly="readonly" style="background-color: white;"></div>
+                                                <div class="col-md-12"><label class="labels">Ocupación</label><input id="ocupacion"type="text" class="form-control" placeholder="Ocupación" value="<?php echo $ocupacion?>" readonly="readonly" style="background-color: white;"></div>
+                                                <?php if ($telefono == 0){ ?>
+                                                <div class="col-md-12"><label class="labels">Telefono</label><input id="telefono"type="text" class="form-control" placeholder="Telefono" value="" readonly="readonly" style="background-color: white;"></div>
+                                                <?php } ?>
+                                                <?php if ($telefono > 0){ ?>
+                                                <div class="col-md-12"><label class="labels">Telefono</label><input id="telefono"type="text" class="form-control" placeholder="Telefono" value="<?php echo $telefono?>" readonly="readonly" style="background-color: white;"></div>
+                                                <?php } ?>
+                                                <div class="col-md-12"><label class="labels">Contraseña</label><input id="contraseña"type="text" class="form-control" placeholder="Contraseña" value="*******" readonly="readonly" style="background-color: white;"></div>
+                                            </div>
+                                            <div class="mt-5 text-center">
+                                                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Editar datos</button>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
                             </div>
                         </div>
                     </div>   
