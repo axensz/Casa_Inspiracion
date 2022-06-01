@@ -85,19 +85,19 @@
             <div class="campus-col">
                 <img src="img/imagen (3).jpg">
                 <div class="layer">
-                    <a href="arte.html" class="h33">Ver más</a>
+                    <a href="galeria.php" class="h33">Ver más</a>
                 </div>
             </div>
             <div class="campus-col">
                 <img src="img/imagen (2).jpg">
                 <div class="layer">
-                    <a href="arte.html" class="h33">Ver más</a>
+                    <a href="galeria.php" class="h33">Ver más</a>
                 </div>
             </div>
             <div class="campus-col">
                 <img src="img/imagen (1).jpg">
                 <div class="layer">
-                    <a href="arte.html" class="h33">Ver más</a>
+                    <a href="galeria.php" class="h33">Ver más</a>
                 </div>
             </div>
         </div>

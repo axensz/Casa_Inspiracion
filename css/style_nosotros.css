@@ -116,3 +116,13 @@ main .sobre-nosotros{
     font-weight: 300;
     font-size: 1.3rem;
 }
+iframe{
+    width:"98%";
+    height:"500";
+    text-align:center;
+}
+#iframe{
+    width:"98%";
+    height:"500";
+    text-align:center;
+}

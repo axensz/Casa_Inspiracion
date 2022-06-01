@@ -1,6 +1,6 @@
 <?php
     include 'php/Inicio_Sesion/login.php';
-    
+    include 'php/Inicio_Sesion/olvidar.php';
 ?>
 
 <!DOCTYPE html>
@@ -25,7 +25,7 @@
             <div class="caja_trasera">
                 <div class="caja_trasera_login">
                     <h3>¿Ya tienes una cuenta?</h3>
-                    <p>Inicia sesion para entrar en la pagina:</p>
+                    <p>Inicia sesion para ingresar a la pagina:</p>
                     <button id="btn_iniciar-sesion" type="submit">INICIAR SESIÓN</button>
                 </div>
                 <div class="caja_trasera_registro">
@@ -63,7 +63,7 @@
                             </div>
                             <div class="modal-body">
                                     <div class="text-center"><i class="fa fa-envelope-o fa-5x"></i></div>
-                                <p>Escribe el correo electronico vinculado a tu cuenta:</p>
+                                <p>Escribe el correo electrónico vinculado a tu cuenta:</p>
                                 <input type="email" placeholder="Correo electronico" name="correo" required>
                                 <div class="text-center"><button type="button" class="btn btn-primary" id="center_button">Enviar correo</button></div>
                             </div>

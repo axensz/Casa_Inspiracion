@@ -21,7 +21,7 @@
         <div class="text-box">
             <h1>NOSOTROS</h1>
             <p></p>
-            <a href="#contenedor" class="hero-btn">Más Información</a>
+            <a href="#Seccion1" class="hero-btn">Más Información</a>
         </div>
     </section>
 
@@ -75,7 +75,7 @@
                                 <div class="mas"><i>+</i></div>
                             </div>
                             <div class="respuesta">
-                                <p>Estamos ubicados en la Cl. 52 #51-55, Bello, Antioquia, al frente del CENSA sede de Bello.<span>R</span><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d247.84046975148652!2d-75.56025132102536!3d6.336031304968713!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e442fa6799ef293%3A0xf96882f5732a4928!2sCl.%2052%20%2351-55%2C%20Bello%2C%20Antioquia!5e0!3m2!1ses!2sco!4v1652459870590!5m2!1ses!2sco" width="98%" height="500" style="text-align:center;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></p>
+                                <p>Estamos ubicados en la Cl. 52 #51-55, Bello, Antioquia, al frente del CENSA sede de Bello.<span>R</span><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d247.84046975148652!2d-75.56025132102536!3d6.336031304968713!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e442fa6799ef293%3A0xf96882f5732a4928!2sCl.%2052%20%2351-55%2C%20Bello%2C%20Antioquia!5e0!3m2!1ses!2sco!4v1652459870590!5m2!1ses!2sco" width="100%" height="500" style="text-align:center;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></p>
                             </div>
                         </div>
                         <div class="casilla-faq">
@@ -84,7 +84,7 @@
                                 <div class="mas"><i>+</i></div>
                             </div>
                             <div class="respuesta">
-                                <p>Claramente, intentamos asociarnos con las mejores personas en sus distintos campos para facilitar la confianza con el cliente, pero cabe recalcar que la calidad de los servicios recae únicamente en el emprendedor.<span>R</span></p>
+                                <p>Claramente, intentamos asociarnos con las mejores personas en sus distintos campos para facilitar la confianza con el cliente, pero cabe recalcar que la calidad de los servicios recaen únicamente en el emprendedor.<span>R</span></p>
                             </div>
                         </div>
                         <div class="casilla-faq">
