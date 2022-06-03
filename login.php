@@ -1,6 +1,6 @@
 <?php
     include 'php/Inicio_Sesion/login.php';
-    include 'php/Inicio_Sesion/olvidar.php';
+    
 ?>
 
 <!DOCTYPE html>
@@ -41,32 +41,48 @@
                     <h2>Iniciar Sesión</h2>
                     <input type="email" placeholder="Correo electronico" name="correo" required>
                     <input type="password" placeholder="Contraseña" name="password" required>
-                    <?php if ($error == 1) { ?>
-                       <script>Swal.fire({
-                            icon: 'error',
-                            text: 'Usuario o contraseña incorrecta',
-                            })
-                        </script>
-                       <?php $error=0; ?>
-                    <?php } ?>
+                        <?php if ($error == 1) { ?>
+                            <script>Swal.fire({
+                                    icon: 'error',
+                                    text: 'Usuario o contraseña incorrecta',
+                                    })
+                            </script>
+                            <?php $error=0; ?>
+                        <?php } ?>
                     <a><p><button2 type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">¿Olvidaste tu contraseña?</button2></p></a>
                     <button>Entrar</button>
                     <a href="index.php" class="volver"><p>Volver</p></a>
                 </form>
                 <!-- Modal -->
                 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                    <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-dialog">
                         <div class="modal-content">
                             <div class="modal-header">
                                 <div class="center"><h5 class="modal-title" id="exampleModalLabel">¿Olvidaste tu contraseña?</h5></div>
                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                             </div>
+                            <form action="php/Inicio_Sesion/olvidar.php" method="POST">
                             <div class="modal-body">
+                                
                                     <div class="text-center"><i class="fa fa-envelope-o fa-5x"></i></div>
-                                <p>Escribe el correo electrónico vinculado a tu cuenta:</p>
-                                <input type="email" placeholder="Correo electronico" name="correo" required>
-                                <div class="text-center"><button type="button" class="btn btn-primary" id="center_button">Enviar correo</button></div>
+                                    <p>Escribe el correo electrónico vinculado a tu cuenta:</p>
+                                    <input type="email" placeholder="Correo electronico" name="correo_olvidar" required autocomplete="off">
+                                    <div class="text-center"><button type="submit" class="btn btn-primary" id="center_button">Enviar correo</button></div>
+
+                                    <?php 
+                                        ini_set('display_errors','Off'); 
+                                        $error_olvidar=$_GET["error_olvidar"];
+                                        if ($error_olvidar == 1) { ?>
+                                        <script>Swal.fire({
+                                                icon: 'error',
+                                                text: 'El correo electronico no existe',
+                                                })
+                                        </script>
+                                        <?php $error_olvidar=0; ?>
+                                    <?php } ?>
+                                
                             </div>
+                            </form>
                             <div class="modal-footer">
                             </div>
                         </div>
@@ -88,5 +104,63 @@
         </div>
     </main>
     <script src="js/login.js?v=<?php echo(rand()); ?>"></script>
+
+    <?php 
+        ini_set('display_errors','Off'); 
+        $error_f=$_GET["error_f"];
+        if ($error_f == 1) { ?>
+            <script>Swal.fire({
+            icon: 'info',
+            title: 'Correo enviado exitosamente',
+            text: 'Revisa tu correo electronico.',
+            })
+            </script>
+    <?php } ?>    
+
+    <?php 
+        ini_set('display_errors','Off'); 
+        $error_registro=$_GET["error_registro"];
+        if ($error_registro == 1) { ?>
+            <script>Swal.fire({
+            icon: 'error',
+            title: 'Correo ya registrado',
+            text: 'El correo ingresado ya es usado.',
+            })
+            </script>
+    <?php } ?>            
+    <?php 
+        ini_set('display_errors','Off'); 
+        $error_registro=$_GET["error_registro"];
+        if ($error_registro == 2) { ?>
+            <script>Swal.fire({
+            icon: 'error',
+            title: 'usuario ya registrado',
+            text: 'El usuario ingresado ya es usado.',
+            })
+            </script>
+    <?php } ?>  
+
+    <?php 
+        ini_set('display_errors','Off'); 
+        $registro_correcto=$_GET["registro_correcto"];
+        if ($registro_correcto == 1) { ?>
+            <script>Swal.fire({
+            icon: 'success',
+            title: 'Registrado correctamente.',
+            })
+            </script>
+    <?php } ?>  
+    <?php 
+        ini_set('display_errors','Off'); 
+        $registro_correcto=$_GET["registro_correcto"];
+        if ($registro_correcto == 2) { ?>
+            <script>Swal.fire({
+            icon: 'warning',
+            title: 'Intentalo de nuevo',
+            text: 'Ha ocurrido un error.',
+            })
+            </script>
+    <?php } ?>  
+
 </body>
 </html>

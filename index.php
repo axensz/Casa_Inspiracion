@@ -11,10 +11,12 @@
     <link rel="stylesheet" href="css/style.css?v=<?php echo(rand()); ?>" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="icon" href="img/Logos/PNG/LogoPNG.png">
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <title>Casa Inspiración</title>
 </head>
 <body>
     <section class="header">
+        
         <?php include 'php/navbar/navbar.php'?>
         <script src="js/Index.js?v=<?php echo(rand()); ?>"></script>
         <div class="text-box">
@@ -22,6 +24,7 @@
             <p>Un lugar donde tendrás la oportunidad de comenzar tu negocio desde el arte.</p>
             <a href="#Seccion1" class="hero-btn">Más Información</a>
         </div>
+
         
     </section>
     
@@ -103,6 +106,8 @@
         </div>
         <p>"La única persona a la que está destinado a convertirse es la persona que decides ser". - Ralph Waldo Emerson.</p>
     </section>
+
+    
 
     <!----footer---->
         <?php include 'php/footer/footer.php'?>
