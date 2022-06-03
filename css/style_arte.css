@@ -7,6 +7,17 @@
     text-align: center;
     margin-top: 5%;
 }
+#imagenes{
+    width: 80%;
+    margin: auto;
+}
+.form-image-upload{
+    margin-bottom: 5%;
+}
+#small{
+    text-decoration: none;
+    font-size: 30%;
+}
 .nav-links{
     margin-top: 1.3%;
     margin-left: 4.4%;
